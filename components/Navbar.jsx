@@ -48,7 +48,7 @@ const Navbar = () => {
 
     return (
       <motion.button
-        className="w-[38px] h-[38px] flex items-center justify-center transition-all duration-300 z-10 transform border-2 border-red-500"
+        className="w-[38px] h-[38px] flex items-center justify-center transition-all duration-300 z-10 transform"
         onClick={onClick}
         whileHover={{ scale: 1.15, transition: { duration: 0 } }}
 
@@ -57,7 +57,7 @@ const Navbar = () => {
 
         onHoverEnd={() => setHoverKey(prevKey => prevKey + 1)}
       >
-        <motion.svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" className="item" style={{transform: 'translate(-6px, -6px)' }}>
+        <motion.svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" className="item" style={{transform: 'translate(-7.5px, -7.5px)' }}>
           <motion.path
             key={hoverKey + "path1"}
             d={svgPath1}
