@@ -1,6 +1,11 @@
+IN DEVELOPMENT
+
 webiste uses [Next.js](https://nextjs.org/) bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-- [ ] animate svg icons using framer motion path 
+## TODO
+- [x] animate svg icons using framer motion path
+- [ ] make nav bar text into svg and animate it
+- [ ] dynamic project cards on hover
 
 ## Getting Started
 
