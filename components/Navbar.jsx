@@ -5,24 +5,6 @@ import { navVariants } from '../utils/motion';
 import styles from '../styles';
 import React, { useState, useEffect } from 'react';
 
-const icon = {
-  hidden: {
-    opacity: 1,
-    pathLength: 0,
-    scale: 2,
-    fill: "rgba(255, 255, 255, 0)"
-  },
-  visible: {
-    opacity: 1,
-    pathLength: 1,
-    scale: 2,
-    fill: "rgba(255, 255, 255, 1)"
-  },
-};
-
-
-
-
 const Navbar = () => {
   const redirectToGithub = () => {
     window.open('https://github.com/feftywacky/', '_blank');
@@ -41,53 +23,89 @@ const Navbar = () => {
   };
 
 
-  const NavButton = ({ onClick, svgPath1, svgPath2, svgPath3, svgPath4 }) => (
-    <button className="w-[38px] h-[38px] flex items-center justify-center transition-all duration-300 z-10 transform hover:scale-110"
-      onClick={onClick}>
-      <motion.svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" className="item">
-        <motion.path
-          d={svgPath1}
-          variants={icon}
-          initial="hidden"
-          animate="visible"
-          transition={{
-            default: { duration: 4, ease: "easeInOut" },
-            fill: { duration: 4, ease: [0.85, 0, 0.15, 1] }
-          }}
-        />
-        <motion.path
-          d={svgPath2}
-          variants={icon}
-          initial="hidden"
-          animate="visible"
-          transition={{
-            default: { duration: 4, ease: "easeInOut" },
-            fill: { duration: 4, ease: [0.85, 0, 0.15, 1] }
-          }}
-        />
-        <motion.path
-          d={svgPath3}
-          variants={icon}
-          initial="hidden"
-          animate="visible"
-          transition={{
-            default: { duration: 4, ease: "easeInOut" },
-            fill: { duration: 4, ease: [0.85, 0, 0.15, 1] }
-          }}
-        />
-        <motion.path
-          d={svgPath4}
-          variants={icon}
-          initial="hidden"
-          animate="visible"
-          transition={{
-            default: { duration: 4, ease: "easeInOut" },
-            fill: { duration: 4, ease: [0.85, 0, 0.15, 1] }
-          }}
-        />
-      </motion.svg>
-    </button>
-  );
+
+  const NavButton = ({ onClick, svgPath1, svgPath2, svgPath3, svgPath4 }) => {
+    const [hoverKey, setHoverKey] = useState(false);
+    const [isHovered, setIsHovered] = useState(false);
+    const [hoverColor, setHoverColor] = useState("rgba(255, 255, 255, 1)");
+
+    const icon = {
+      hidden: {
+        opacity: 1,
+        pathLength: 0,
+        scale: 2,
+        fill: "rgba(255, 255, 255, 0)"
+      },
+      visible: {
+        opacity: 1,
+        pathLength: 1,
+        scale: 2,
+        fill: hoverColor
+      },
+
+    };
+
+
+    return (
+      <motion.button
+        className="w-[38px] h-[38px] flex items-center justify-center transition-all duration-300 z-10 transform border-2 border-red-500"
+        onClick={onClick}
+        whileHover={{ scale: 1.15, transition: { duration: 0 } }}
+
+        onMouseEnter={() => { setIsHovered(true); setHoverColor("#00FF7F"); }}
+        onMouseLeave={() => { setIsHovered(false); setHoverColor("rgba(255, 255, 255, 1)"); }}
+
+        onHoverEnd={() => setHoverKey(prevKey => prevKey + 1)}
+      >
+        <motion.svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" className="item" style={{transform: 'translate(-6px, -6px)' }}>
+          <motion.path
+            key={hoverKey + "path1"}
+            d={svgPath1}
+            variants={icon}
+            initial={"hidden"}
+            animate={"visible"}
+            transition={{
+              default: { duration: 1.5, ease: "easeInOut" },
+              fill: { duration: isHovered ? 0 : 1.5, ease: [0.85, 0, 0.15, 1] }
+            }}
+          />
+          <motion.path
+            key={hoverKey + "path2"}
+            d={svgPath2}
+            variants={icon}
+            initial={"hidden"}
+            animate={"visible"}
+            transition={{
+              default: { duration: 1.5, ease: "easeInOut" },
+              fill: { duration: isHovered ? 0 : 1.5, ease: [0.85, 0, 0.15, 1] }
+            }}
+          />
+          <motion.path
+            key={hoverKey + "path3"}
+            d={svgPath3}
+            variants={icon}
+            initial={"hidden"}
+            animate={"visible"}
+            transition={{
+              default: { duration: 1.5, ease: "easeInOut" },
+              fill: { duration: isHovered ? 0 : 1.5, ease: [0.85, 0, 0.15, 1] }
+            }}
+          />
+          <motion.path
+            key={hoverKey + "path4"}
+            d={svgPath4}
+            variants={icon}
+            initial={"hidden"}
+            animate={"visible"}
+            transition={{
+              default: { duration: 1.5, ease: "easeInOut" },
+              fill: { duration: isHovered ? 0 : 1.5, ease: [0.85, 0, 0.15, 1] }
+            }}
+          />
+        </motion.svg>
+      </motion.button>
+    );
+  };
 
   const TextButton = ({ onClick, buttonText }) => (
     <button className="bg-transparent border-none cursor-pointer text-white text-xl hover:scale-110 hover:text-hoverColor transition-colors duration-200 z-10 font-semibold"
@@ -108,17 +126,17 @@ const Navbar = () => {
       {/* <div className="absolute w-[125%] inset-0 gradient-01" /> */}
       <div className={`${styles.innerWidth} mx-auto flex justify-between items-center`}>
         <div className="flex gap-6">
-        
+
           <TextButton onClick={redirectToGithub} buttonText="About" />
           <TextButton onClick={redirectToGithub} buttonText="Projects" />
           <TextButton onClick={redirectToGithub} buttonText="Skills" />
         </div>
 
         <div className="flex gap-6">
-          <NavButton onClick={redirectToResume} 
-          svgPath1="M 276.265625 252.15625 C 269.898438 254.3125 263.054688 255.476562 256 255.476562 C 248.945312 255.476562 242.101562 254.3125 235.734375 252.15625 C 189.476562 259.789062 165.265625 293.789062 165.265625 335.054688 L 346.734375 335.054688 C 346.734375 293.789062 322.523438 259.789062 276.265625 252.15625 Z M 276.265625 252.15625" 
-          svgPath2="M 256 240.789062 C 283.421875 240.789062 305.632812 218.523438 305.632812 191.101562 L 305.632812 177.054688 C 305.632812 149.632812 283.421875 127.367188 256 127.367188 C 228.578125 127.367188 206.367188 149.632812 206.367188 177.054688 L 206.367188 191.101562 C 206.367188 218.523438 228.578125 240.789062 256 240.789062 Z M 256 240.789062 "
-          svgPath3="M 378.421875 0 L 133.578125 0 C 86.210938 0 47.6875 38.523438 47.6875 85.898438 L 47.6875 426.101562 C 47.6875 473.476562 86.210938 512 133.578125 512 L 352.476562 512 L 464.3125 400.15625 L 464.3125 85.898438 C 464.3125 38.523438 425.789062 0 378.421875 0 Z M 432.476562 387 L 384.367188 387 C 359.476562 387 339.265625 407.15625 339.265625 432.054688 L 339.265625 480.210938 L 133.578125 480.210938 C 103.734375 480.210938 79.523438 456 79.523438 426.101562 L 79.523438 85.898438 C 79.523438 56 103.734375 31.789062 133.578125 31.789062 L 378.421875 31.789062 C 408.265625 31.789062 432.476562 56 432.476562 85.898438 Z M 432.476562 387"
+          <NavButton onClick={redirectToResume}
+            svgPath1="M 276.265625 252.15625 C 269.898438 254.3125 263.054688 255.476562 256 255.476562 C 248.945312 255.476562 242.101562 254.3125 235.734375 252.15625 C 189.476562 259.789062 165.265625 293.789062 165.265625 335.054688 L 346.734375 335.054688 C 346.734375 293.789062 322.523438 259.789062 276.265625 252.15625 Z M 276.265625 252.15625"
+            svgPath2="M 256 240.789062 C 283.421875 240.789062 305.632812 218.523438 305.632812 191.101562 L 305.632812 177.054688 C 305.632812 149.632812 283.421875 127.367188 256 127.367188 C 228.578125 127.367188 206.367188 149.632812 206.367188 177.054688 L 206.367188 191.101562 C 206.367188 218.523438 228.578125 240.789062 256 240.789062 Z M 256 240.789062 "
+            svgPath3="M 378.421875 0 L 133.578125 0 C 86.210938 0 47.6875 38.523438 47.6875 85.898438 L 47.6875 426.101562 C 47.6875 473.476562 86.210938 512 133.578125 512 L 352.476562 512 L 464.3125 400.15625 L 464.3125 85.898438 C 464.3125 38.523438 425.789062 0 378.421875 0 Z M 432.476562 387 L 384.367188 387 C 359.476562 387 339.265625 407.15625 339.265625 432.054688 L 339.265625 480.210938 L 133.578125 480.210938 C 103.734375 480.210938 79.523438 456 79.523438 426.101562 L 79.523438 85.898438 C 79.523438 56 103.734375 31.789062 133.578125 31.789062 L 378.421875 31.789062 C 408.265625 31.789062 432.476562 56 432.476562 85.898438 Z M 432.476562 387"
           />
           <NavButton onClick={redirectToEmail} svgPath1="M 405.070312 0.53125 L 106.59375 0.53125 C 47.753906 0.601562 0.0703125 52.480469 0 116.488281 L 0 394.789062 C 0.0703125 458.796875 47.753906 510.671875 106.59375 510.742188 L 405.070312 510.742188 C 463.914062 510.671875 511.59375 458.796875 511.667969 394.789062 L 511.667969 116.488281 C 511.59375 52.480469 463.914062 0.601562 405.070312 0.53125 Z M 106.59375 46.914062 L 405.070312 46.914062 C 431.183594 46.96875 454.648438 64.292969 464.335938 90.671875 L 301.074219 268.300781 C 276.0625 295.402344 235.605469 295.402344 210.59375 268.300781 L 47.332031 90.671875 C 57.019531 64.292969 80.480469 46.96875 106.59375 46.914062 Z M 405.070312 464.363281 L 106.59375 464.363281 C 71.277344 464.363281 42.636719 433.214844 42.636719 394.789062 L 42.636719 151.273438 L 180.449219 301.089844 C 222.117188 346.304688 289.550781 346.304688 331.21875 301.089844 L 469.03125 151.273438 L 469.03125 394.789062 C 469.03125 433.214844 440.390625 464.363281 405.070312 464.363281 Z M 405.070312 464.36328" />
           <NavButton onClick={redirectToLinkedin} svgPath1="M 436.246094 436.253906 L 360.382812 436.253906 L 360.382812 317.449219 C 360.382812 289.117188 359.878906 252.648438 320.925781 252.648438 C 281.414062 252.648438 275.371094 283.515625 275.371094 315.386719 L 275.371094 436.246094 L 199.507812 436.246094 L 199.507812 191.933594 L 272.335938 191.933594 L 272.335938 225.320312 L 273.355469 225.320312 C 288.207031 199.929688 315.816406 184.765625 345.210938 185.855469 C 422.101562 185.855469 436.277344 236.433594 436.277344 302.226562 Z M 113.910156 158.535156 C 89.597656 158.542969 69.882812 138.835938 69.878906 114.519531 C 69.875 90.207031 89.582031 70.492188 113.894531 70.488281 C 138.207031 70.484375 157.921875 90.191406 157.925781 114.503906 C 157.929688 126.179688 153.292969 137.378906 145.039062 145.636719 C 136.78125 153.894531 125.585938 158.535156 113.910156 158.535156 M 151.839844 436.253906 L 75.898438 436.253906 L 75.898438 191.933594 L 151.839844 191.933594 Z M 474.066406 0.0351562 L 37.777344 0.0351562 C 17.160156 -0.195312 0.25 16.320312 -0.00390625 36.941406 L -0.00390625 475.046875 C 0.242188 495.679688 17.148438 512.210938 37.777344 511.996094 L 474.066406 511.996094 C 494.738281 512.25 511.710938 495.71875 511.996094 475.046875 L 511.996094 36.910156 C 511.703125 16.25 494.726562 -0.269531 474.066406 0 " />

@@ -14,6 +14,11 @@ module.exports = {
         'secondary-white': '#c7c7c7',
         hoverColor: '#00FF7F',
       },
+
+      scale: {
+        120: '1.2',
+      },
+      
       transitionTimingFunction: {
         'out-flex': 'cubic-bezier(0.05, 0.6, 0.4, 0.9)',
       },
