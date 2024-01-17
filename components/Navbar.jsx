@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { navVariants } from '../utils/motion';
 import styles from '../styles';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 const Navbar = () => {
   const redirectToGithub = () => {
@@ -48,7 +48,7 @@ const Navbar = () => {
 
     return (
       <motion.button
-        className="w-[38px] h-[38px] flex items-center justify-center transition-all duration-300 z-10 transform"
+        className="w-[36px] h-[36px] flex items-center justify-center transition-all duration-300 z-10 transform"
         onClick={onClick}
         whileHover={{ scale: 1.15, transition: { duration: 0 } }}
 
@@ -57,7 +57,7 @@ const Navbar = () => {
 
         onHoverEnd={() => setHoverKey(prevKey => prevKey + 1)}
       >
-        <motion.svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" className="item" style={{transform: 'translate(-7.5px, -7.5px)' }}>
+        <motion.svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" className="item" style={{ transform: 'translate(-7px, -7px)' }}>
           <motion.path
             key={hoverKey + "path1"}
             d={svgPath1}
@@ -65,8 +65,8 @@ const Navbar = () => {
             initial={"hidden"}
             animate={"visible"}
             transition={{
-              default: { duration: 1.5, ease: "easeInOut" },
-              fill: { duration: isHovered ? 0 : 1.5, ease: [0.85, 0, 0.15, 1] }
+              default: { duration: 2, ease: "easeInOut" },
+              fill: { duration: isHovered ? 0 : 2, ease: [0.85, 0, 0.15, 1] }
             }}
           />
           <motion.path
@@ -76,8 +76,8 @@ const Navbar = () => {
             initial={"hidden"}
             animate={"visible"}
             transition={{
-              default: { duration: 1.5, ease: "easeInOut" },
-              fill: { duration: isHovered ? 0 : 1.5, ease: [0.85, 0, 0.15, 1] }
+              default: { duration: 2, ease: "easeInOut" },
+              fill: { duration: isHovered ? 0 : 2, ease: [0.85, 0, 0.15, 1] }
             }}
           />
           <motion.path
@@ -87,8 +87,8 @@ const Navbar = () => {
             initial={"hidden"}
             animate={"visible"}
             transition={{
-              default: { duration: 1.5, ease: "easeInOut" },
-              fill: { duration: isHovered ? 0 : 1.5, ease: [0.85, 0, 0.15, 1] }
+              default: { duration: 2, ease: "easeInOut" },
+              fill: { duration: isHovered ? 0 : 2, ease: [0.85, 0, 0.15, 1] }
             }}
           />
           <motion.path
@@ -98,8 +98,8 @@ const Navbar = () => {
             initial={"hidden"}
             animate={"visible"}
             transition={{
-              default: { duration: 1.5, ease: "easeInOut" },
-              fill: { duration: isHovered ? 0 : 1.5, ease: [0.85, 0, 0.15, 1] }
+              default: { duration: 2, ease: "easeInOut" },
+              fill: { duration: isHovered ? 0 : 2, ease: [0.85, 0, 0.15, 1] }
             }}
           />
         </motion.svg>
@@ -107,11 +107,10 @@ const Navbar = () => {
     );
   };
 
-  const TextButton = ({ onClick, buttonText }) => (
-    <button className="bg-transparent border-none cursor-pointer text-white text-xl hover:scale-110 hover:text-hoverColor transition-colors duration-200 z-10 font-semibold"
-      onClick={onClick}>
+  const TextButton = ({ href, buttonText }) => (
+    <a href={href} className="bg-transparent border-none cursor-pointer text-white text-xl hover:scale-110 hover:text-hoverColor transition-colors duration-200 z-10 font-semibold">
       {buttonText}
-    </button>
+    </a>
   );
 
   return (
@@ -120,20 +119,21 @@ const Navbar = () => {
       variants={navVariants}
       initial="hidden"
       whileInView="show"
-      className={`${styles.xPaddings} py-8 relative`}
+      className={`${styles.xPaddings} py-8 fixed top-0 w-full z-50`}
+      style={{ backdropFilter: 'blur(10px)', backgroundColor: "rgba(0,0,0,0.3)" }}
     >
 
-      {/* <div className="absolute w-[125%] inset-0 gradient-01" /> */}
-      <div className={`${styles.innerWidth} mx-auto flex justify-between items-center`}>
+      {/* <div className="absolute w-[50%] inset-0 gradient-01" /> */}
+      <div className={`${styles.innerWidth} mx-flex md:flex-row justify-between items-center`}>
         <div className="flex gap-6">
-
-          <TextButton onClick={redirectToGithub} buttonText="About" />
-          <TextButton onClick={redirectToGithub} buttonText="Projects" />
-          <TextButton onClick={redirectToGithub} buttonText="Skills" />
+        <TextButton href="#top" buttonText="Home" />
+          <TextButton href="#about" buttonText="About" />
+          <TextButton href="#explore" buttonText="Projects" />
+          <TextButton href="#hero" buttonText="Skills" />
         </div>
 
-        <div className="flex gap-6">
-          
+        <div className="flex gap-6 md:flex-row">
+
           <NavButton onClick={redirectToEmail} svgPath1="M 405.070312 0.53125 L 106.59375 0.53125 C 47.753906 0.601562 0.0703125 52.480469 0 116.488281 L 0 394.789062 C 0.0703125 458.796875 47.753906 510.671875 106.59375 510.742188 L 405.070312 510.742188 C 463.914062 510.671875 511.59375 458.796875 511.667969 394.789062 L 511.667969 116.488281 C 511.59375 52.480469 463.914062 0.601562 405.070312 0.53125 Z M 106.59375 46.914062 L 405.070312 46.914062 C 431.183594 46.96875 454.648438 64.292969 464.335938 90.671875 L 301.074219 268.300781 C 276.0625 295.402344 235.605469 295.402344 210.59375 268.300781 L 47.332031 90.671875 C 57.019531 64.292969 80.480469 46.96875 106.59375 46.914062 Z M 405.070312 464.363281 L 106.59375 464.363281 C 71.277344 464.363281 42.636719 433.214844 42.636719 394.789062 L 42.636719 151.273438 L 180.449219 301.089844 C 222.117188 346.304688 289.550781 346.304688 331.21875 301.089844 L 469.03125 151.273438 L 469.03125 394.789062 C 469.03125 433.214844 440.390625 464.363281 405.070312 464.363281 Z M 405.070312 464.36328" />
           <NavButton onClick={redirectToResume}
             svgPath1="M 276.265625 252.15625 C 269.898438 254.3125 263.054688 255.476562 256 255.476562 C 248.945312 255.476562 242.101562 254.3125 235.734375 252.15625 C 189.476562 259.789062 165.265625 293.789062 165.265625 335.054688 L 346.734375 335.054688 C 346.734375 293.789062 322.523438 259.789062 276.265625 252.15625 Z M 276.265625 252.15625"
