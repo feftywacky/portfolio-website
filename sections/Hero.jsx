@@ -64,10 +64,11 @@ const Hero = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
-        className={`${styles.innerWidth} mx-auto flex flex-col sm:flex-row justify-between items-center`}
+        className={`${styles.innerWidth} mx-auto flex flex-col lg:flex-row mt-[-50px] sm:mt[-300px] justify-between items-center`}
       >
-        <div className="name">
-        <div>
+        <div className="name mt-[-75px] mb-[50px] lg:mt-0 lg:mb-0">
+        <motion.div variants={slideIn('left', 'tween', 0.2, 1)}
+        >
           {hi.map((char, index) => (
             <motion.span key={index}
 
@@ -89,9 +90,9 @@ const Hero = () => {
               {char}
             </motion.span>
           ))}
-        </div>
+        </motion.div>
 
-        <div>
+        <motion.div variants={slideIn('left', 'tween', 0.2, 1)}>
           {myName.map((char, index) => (
             <motion.span
 
@@ -115,11 +116,11 @@ const Hero = () => {
               {char === " " ? "\u00A0" : char}
             </motion.span>
           ))}
-        </div>
+        </motion.div>
 
 
         <motion.div
-          variants={textVariant(1.3)}
+          variants={{...textVariant(1.3),...slideIn('left', 'tween', 0.2, 1)}}
           className="flex flex-row justify-start items-start"
         >
           <div className={styles.heroSubheading}>
@@ -146,7 +147,7 @@ const Hero = () => {
           variants={slideIn('right', 'tween', 0.2, 1)}
           className="col-span-4 place-self-center mt-4 lg:mt-0"
         >
-          <div className="rounded-full bg-[#181818] w-[380px] h-[280px] lg:w-[510px] lg:h-[510px] relative overflow-hidden">
+          <div className="rounded-full bg-[#181818] w-[250px] h-[250px] md:w-[360px] md:h-[360px] lg:w-[500px] lg:h-[500px] relative overflow-hidden">
             <img
               src="/pfp.jpg"
               alt="hero_pfp"
