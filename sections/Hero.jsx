@@ -1,52 +1,86 @@
 'use client';
 
-import { motion, transform } from 'framer-motion';
-
+import { motion, useAnimation } from 'framer-motion';
 import styles from '../styles';
-import { slideIn, staggerContainer, textVariant } from '../utils/motion';
+import { staggerContainer, textVariant } from '../utils/motion';
 import { TypeAnimation } from "react-type-animation";
+import { useState } from 'react';
 
 const Hero = () => {
-
   const hi = "Hi!".split("")
   const myName = "I'm Feiyu,".split("")
-
-  const bounceAnimation = () => {
-    return{
-      transform: [
-        "scale3d(1, 1, 1)",
-        "scale3d(1.4, 0.55, 1)",
-        "scale3d(0.75, 1.25, 1)",
-        "scale3d(1.25, 0.85, 1)",
-        "scale3d(0.9, 1.05, 1)",
-        "scale3d(1, 1, 1)",
-      ],
-
-      color: "#00FF7F",
-
-      transition: {
-        times: [0, 0.2, 0.3, 0.6, 0.8, 1],
-        color: {duration: 0},
-      }
+  const animation_hi = hi.map(() => useAnimation());
+  const animation_name= myName.map(() => useAnimation());
+  const [isBouncingHi, setIsBouncingHi] = useState(
+    hi.map(() => false)
+  )
+  const [isBouncingName, setIsBouncingName] = useState(
+    myName.map(() => false)
+  )
 
 
+
+  const bounceAnimation = (index, animationControls, isBouncing, setIsBouncing) => {
+    if (!isBouncing[index]) {
+      setIsBouncing(prevState => {
+        const newState = [...prevState];
+        newState[index] = true;
+        return newState;
+      })
+      animationControls[index].start({
+        transform: [
+          "scale3d(1, 1, 1)",
+          "scale3d(1.4, 0.55, 1)",
+          "scale3d(0.75, 1.25, 1)",
+          "scale3d(1.25, 0.85, 1)",
+          "scale3d(0.9, 1.05, 1)",
+          "scale3d(1, 1, 1)",
+        ],
+        color: "#00FF7F",
+        transition: {
+          times: [0, 0.2, 0.3, 0.6, 0.8, 1],
+          color: { duration: 0.5 },
+        }
+      }).then(() => {
+        animationControls[index].start({
+          color: "#FFFFFF",
+          transition: {
+            color: { duration: 0.3 },
+          }
+         });
+        setIsBouncing(prevState => {
+          const newState = [...prevState];
+          newState[index] = false;
+          return newState;
+        })
+      })
     }
   }
 
+
+
   return (
-    <section className={`${styles.yPaddings} sm:pl-16 pl-6`} style={{marginTop: "75px"}}>
+    <section className={`${styles.yPaddings} sm:pl-16 pl-6`} style={{ marginTop: "75px" }}>
       <motion.div
         variants={staggerContainer}
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
-        className={`${styles.innerWidth} mx-auto flex flex-col`}
+        className={`${styles.innerWidth} mx-auto flex flex-col mt-12`}
       >
         <div className="flex justify-start items-start flex-col relative">
-        <div>
+          <div>
             {hi.map((char, index) => (
               <motion.span key={index} 
-              whileHover={()=>bounceAnimation()}
+
+              animate={animation_hi[index]}
+              onMouseOver={() => bounceAnimation(index, animation_hi, isBouncingHi, setIsBouncingHi)}
+              onAnimationComplete={() => setIsBouncingHi(prevState => {
+                const newState = [...prevState];
+                newState[index] = false;
+                return newState;
+              })}
+
               variants={textVariant(1.1)} 
               className={styles.heroHeading} 
               style={{ display: 'inline-block',
@@ -60,38 +94,49 @@ const Hero = () => {
 
           <div>
             {myName.map((char, index) => (
-              <motion.span key={index} 
-              whileHover={bounceAnimation} 
-              variants={textVariant(1.2)} 
-              className={styles.heroHeading} 
-              style={{ display: 'inline-block',
-              lineHeight: '1', 
-              padding: '0', 
-        }}>
+              <motion.span
+
+                key={index}
+                animate={animation_name[index]}
+                onMouseOver={() => bounceAnimation(index, animation_name, isBouncingName, setIsBouncingName)}
+                onAnimationComplete={() => setIsBouncingName(prevState => {
+                  const newState = [...prevState];
+                  newState[index] = false;
+                  return newState;
+                })}
+
+                variants={textVariant(1.2)}
+                className={styles.heroHeading}
+                style={{
+                  display: 'inline-block',
+                  lineHeight: '1', 
+                  padding: '0', 
+                }}
+              >
                 {char === " " ? "\u00A0" : char}
               </motion.span>
             ))}
           </div>
+
 
           <motion.div
             variants={textVariant(1.3)}
             className="flex flex-row justify-start items-start"
           >
             <div className={styles.heroSubheading}>
-              {/* <span className={styles.heroHeading}> &gt; </span> */}
-            <TypeAnimation
-              sequence={[
-                "Software Developer",
-                1500,
-                "Frontend Developer",
-                1500,
-                "UI/UX Designer",
-                1500,
-              ]}
-              wrapper="span"
-              speed={50}
-              repeat={Infinity}
-            />
+              <TypeAnimation
+                sequence={[
+                  "Software Developer",
+                  1500,
+                  "Frontend Developer",
+                  1500,
+                  "UI/UX Designer",
+                  1500,
+                ]}
+                wrapper="span"
+                speed={50}
+                repeat={Infinity}
+              />
             </div>
 
 
@@ -101,7 +146,7 @@ const Hero = () => {
           </motion.div>
 
 
-         
+
 
         </div>
 

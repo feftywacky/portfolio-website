@@ -108,7 +108,7 @@ const Navbar = () => {
   };
 
   const TextButton = ({ href, buttonText }) => (
-    <a href={href} className="bg-transparent border-none cursor-pointer text-white text-xl hover:scale-110 hover:text-hoverColor transition-colors duration-200 z-10 font-semibold">
+    <a href={href} className="bg-transparent border-none cursor-pointer text-white text-xl hover:scale-120 hover:text-hoverColor transition-colors duration-200 z-10 font-semibold">
       {buttonText}
     </a>
   );
