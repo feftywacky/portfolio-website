@@ -48,7 +48,7 @@ const Navbar = () => {
 
     return (
       <motion.button
-        className="w-[36px] h-[36px] flex items-center justify-center transition-all duration-300 z-10 transform"
+        className="w-[28px] h-[28px] lg:w-[36px] lg:h-[36px]  md:w-[32px] md:h-[32px] flex items-center justify-center transition-all duration-300 z-10 transform"
         onClick={onClick}
         whileHover={{ scale: 1.15, transition: { duration: 0 } }}
 
@@ -108,7 +108,7 @@ const Navbar = () => {
   };
 
   const TextButton = ({ href, buttonText }) => (
-    <a href={href} className="bg-transparent border-none cursor-pointer text-white text-xl hover:scale-120 hover:text-hoverColor transition-colors duration-200 z-10 font-semibold">
+    <a href={href} className="text-l md:text-xl bg-transparent border-none cursor-pointer text-white hover:scale-120 hover:text-hoverColor transition-colors duration-200 z-10 font-semibold">
       {buttonText}
     </a>
   );
@@ -119,20 +119,20 @@ const Navbar = () => {
       variants={navVariants}
       initial="hidden"
       whileInView="show"
-      className={`${styles.xPaddings} py-8 fixed top-0 w-full z-50`}
+      className={`${styles.xPaddings} pb-4 pt-4 sm:pb-12 sm:pt-10 py-8 fixed top-0 w-full z-50`}
       style={{ backdropFilter: 'blur(10px)', backgroundColor: "rgba(0,0,0,0.3)" }}
     >
 
-      <div className="absolute w-[50%] inset-0 gradient-01" />
+      <div className="absolute w-[75%] inset-0 gradient-01" />
       <div className={`${styles.innerWidth} mx-auto flex flex-col sm:flex-row justify-center sm:justify-between items-center`}>
-        <div className="flex justify-center sm:justify-start gap-6 mb-4 sm:mb-0">
-        <TextButton href="#top" buttonText="Home" />
+        <div className="flex justify-center sm:justify-start items-center gap-6">
+          <TextButton href="#top" buttonText="Home" />
           <TextButton href="#about" buttonText="About" />
           <TextButton href="#explore" buttonText="Projects" />
           <TextButton href="#hero" buttonText="Skills" />
         </div>
 
-        <div className="flex justify-center sm:justify-start gap-6 mt-4 sm:mt-0">
+        <div className="flex justify-center sm:justify-start items-center gap-6 pt-3 sm:pt-0">
 
           <NavButton onClick={redirectToEmail} svgPath1="M 405.070312 0.53125 L 106.59375 0.53125 C 47.753906 0.601562 0.0703125 52.480469 0 116.488281 L 0 394.789062 C 0.0703125 458.796875 47.753906 510.671875 106.59375 510.742188 L 405.070312 510.742188 C 463.914062 510.671875 511.59375 458.796875 511.667969 394.789062 L 511.667969 116.488281 C 511.59375 52.480469 463.914062 0.601562 405.070312 0.53125 Z M 106.59375 46.914062 L 405.070312 46.914062 C 431.183594 46.96875 454.648438 64.292969 464.335938 90.671875 L 301.074219 268.300781 C 276.0625 295.402344 235.605469 295.402344 210.59375 268.300781 L 47.332031 90.671875 C 57.019531 64.292969 80.480469 46.96875 106.59375 46.914062 Z M 405.070312 464.363281 L 106.59375 464.363281 C 71.277344 464.363281 42.636719 433.214844 42.636719 394.789062 L 42.636719 151.273438 L 180.449219 301.089844 C 222.117188 346.304688 289.550781 346.304688 331.21875 301.089844 L 469.03125 151.273438 L 469.03125 394.789062 C 469.03125 433.214844 440.390625 464.363281 405.070312 464.363281 Z M 405.070312 464.36328" />
           <NavButton onClick={redirectToResume}

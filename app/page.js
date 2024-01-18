@@ -6,9 +6,9 @@ const Page = () => (
   <div className="bg-black overflow-hidden">
     <Navbar />
     <div style={{ paddingTop: '60px' }}>
-      <div id="hero"><Hero /></div>
-      <div id="about"><About /></div>
-      <div id="explore"><Explore /></div>
+      <div id="hero" className="h-screen"><Hero /></div>
+      <div id="about" className="h-screen"><About /></div>
+      <div id="explore" className="h-screen"><Explore /></div>
       <GetStarted />
       <WhatsNew />
       <World />
