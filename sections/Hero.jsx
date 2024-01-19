@@ -66,7 +66,7 @@ const Hero = () => {
         viewport={{ once: false, amount: 0.25 }}
         className={`${styles.innerWidth} mx-auto flex flex-col lg:flex-row mt-[-50px] lg:mt-[-180px] justify-between items-center`}
       >
-        <div className="name mt-[-75px] mb-[50px] lg:mt-0 lg:mb-0">
+        <div className="name mini:mt-[-50px] mb-[50px] md:mt-[100px] md:mb-0">
         <motion.div variants={slideIn('left', 'tween', 0.2, 1)}
         >
           {hi.map((char, index) => (
@@ -142,12 +142,12 @@ const Hero = () => {
         </div>
           
 
-        <div className="pfp">
+        <div className="pfp md:mr-[70px] md:mt-[20px] lg:mt-[70px]">
         <motion.div
           variants={slideIn('right', 'tween', 0.2, 1)}
           className="col-span-4 place-self-center mt-4 lg:mt-0"
         >
-          <div className="rounded-full bg-[#181818] w-[250px] h-[250px] md:w-[360px] md:h-[360px] lg:w-[490px] lg:h-[490px] relative overflow-hidden">
+          <div className="rounded-full bg-[#181818] w-[250px] h-[250px] md:w-[360px] md:h-[360px] lg:w-[490px] lg:h-[490px] relative overflow-hidden ">
             <img
               src="/pfp.jpg"
               alt="hero_pfp"
@@ -155,7 +155,7 @@ const Hero = () => {
             />
           </div>
         </motion.div>
-        </div>
+      </div>
 
 
       </motion.div>

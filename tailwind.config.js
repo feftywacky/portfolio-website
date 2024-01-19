@@ -18,6 +18,11 @@ module.exports = {
       scale: {
         120: '1.2',
       },
+
+      screens: {
+        'lg': '1025px',
+        'mini': '400px',
+      },
       
       transitionTimingFunction: {
         'out-flex': 'cubic-bezier(0.05, 0.6, 0.4, 0.9)',

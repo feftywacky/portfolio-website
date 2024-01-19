@@ -23,6 +23,8 @@ const About = () => (
       >
         Hi! My name is Feiyu Lin and I'm currently study Computer Science at the University of Ottawa.
         
+
+        Outside of school I enjoy reading, going to the gym, and discovering new music. 
         
         temp temp temp temptemp temp temp temptemp temp temp temp
         temp temp temp temp
@@ -36,9 +38,7 @@ const About = () => (
         temp temp temp temp
         {' '}
         <span className="font-extrabold text-white">temp temp temp temp</span> temp temp temp temptemp temp temp tempte
-        mp temp temp temptemp temp temp temptemp temp temp temp{' '}
-        <span className="font-extrabold text-white">temp temp temp temp</span>temp temp temp temptemp temp temp temptemp temp temp temp
-        temp temp temp temptemp temp temp temptemp temp temp temp
+        mp temp temp temptemp temp temp
       </motion.p>
 
       <motion.img

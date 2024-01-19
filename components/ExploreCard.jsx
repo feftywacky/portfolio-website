@@ -25,9 +25,10 @@ const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => (
         {title}
       </h3>
     ) : (
-      <div className="absolute bottom-0 p-8 flex justify-start w-full flex-col bg-[rgba(0,0,0,0.5)] rounded-b-[24px]">
+      <div className={`absolute bottom-0 p-8 flex justify-start w-full flex-col bg-[rgba(0,0,0,0.5)] rounded-b-[24px]`}>
+        <div className={`flex flex-row space-x-3`}>
         <div
-          className={`${styles.flexCenter} w-[60px] h-[60px] rounded-[24px] glassmorphism mb-[16px]`}
+          className={`${styles.flexCenter} w-[60px] h-[60px] rounded-[24px] glassmorphism`}
         >
           <img
             src="/github.svg"
@@ -35,10 +36,22 @@ const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => (
             className="w-full h-full object-contain"
           />
         </div>
-        <p className="font-normal text-[16px] leading-[20.16px] text-white uppercase">
+
+        <div
+          className={`${styles.flexCenter} w-[60px] h-[60px] rounded-[24px] glassmorphism`}
+        >
+          <img
+            src="/export.png"
+            alt="github"
+            className="w-[60%] h-[60%] object-contain"
+          />
+        </div>
+        </div>
+        
+        {/* <p className="font-normal text-[16px] leading-[20.16px] text-white uppercase">
           Source Code
-        </p>
-        <h2 className="mt-[24px] font-semibold sm:text-[32px] text-[24px] text-white">
+        </p> */}
+        <h2 className="mt-[12px] font-semibold sm:text-[32px] text-[24px] text-white">
           {title}
         </h2>
       </div>
