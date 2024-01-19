@@ -1,28 +1,29 @@
-export const exploreWorlds = [
+export const projects = [
   {
-    id: 'world-1',
-    imgUrl: '/planet-01.png',
-    title: 'The Hogwarts',
+    id: 'project-1',
+    imgUrl: '/medihub.jpg',
+    title: 'Healthcare Management App',
   },
   {
-    id: 'world-2',
-    imgUrl: '/planet-02.png',
-    title: 'The Upside Down',
+    id: 'project-2',
+    imgUrl: '/chess_engine.jpg',
+    title: 'Chess Engine',
   },
   {
-    id: 'world-3',
-    imgUrl: '/planet-03.png',
-    title: 'Kadirojo Permai',
+    id: 'project-3',
+    imgUrl: '/spaceship4.jpg',
+    title: 'Space Invaders',
+    
   },
   {
-    id: 'world-4',
-    imgUrl: '/planet-04.png',
-    title: 'Paradise Island',
+    id: 'project-4',
+    imgUrl: '/kmap.jpg',
+    title: 'Karnaugh Map Solver',
   },
   {
-    id: 'world-5',
-    imgUrl: '/planet-05.png',
-    title: 'Hawkins Labs',
+    id: 'project-5',
+    imgUrl: '/generative_ai.jpg',
+    title: 'Generative AI Fullstack App',
   },
 ];
 

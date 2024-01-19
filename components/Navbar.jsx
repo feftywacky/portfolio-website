@@ -123,7 +123,7 @@ const Navbar = () => {
       style={{ backdropFilter: 'blur(10px)', backgroundColor: "rgba(0,0,0,0.3)" }}
     >
 
-      <div className="absolute w-[75%] inset-0 gradient-01" />
+      {/* <div className="absolute w-[75%] inset-0 gradient-01" /> */}
       <div className={`${styles.innerWidth} mx-auto flex flex-col sm:flex-row justify-center sm:justify-between items-center`}>
         <div className="flex justify-center sm:justify-start items-center gap-6">
           <TextButton href="#top" buttonText="Home" />

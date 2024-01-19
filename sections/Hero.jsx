@@ -64,7 +64,7 @@ const Hero = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
-        className={`${styles.innerWidth} mx-auto flex flex-col lg:flex-row mt-[-50px] sm:mt[-300px] justify-between items-center`}
+        className={`${styles.innerWidth} mx-auto flex flex-col lg:flex-row mt-[-50px] lg:mt-[-180px] justify-between items-center`}
       >
         <div className="name mt-[-75px] mb-[50px] lg:mt-0 lg:mb-0">
         <motion.div variants={slideIn('left', 'tween', 0.2, 1)}
@@ -147,7 +147,7 @@ const Hero = () => {
           variants={slideIn('right', 'tween', 0.2, 1)}
           className="col-span-4 place-self-center mt-4 lg:mt-0"
         >
-          <div className="rounded-full bg-[#181818] w-[250px] h-[250px] md:w-[360px] md:h-[360px] lg:w-[500px] lg:h-[500px] relative overflow-hidden">
+          <div className="rounded-full bg-[#181818] w-[250px] h-[250px] md:w-[360px] md:h-[360px] lg:w-[490px] lg:h-[490px] relative overflow-hidden">
             <img
               src="/pfp.jpg"
               alt="hero_pfp"

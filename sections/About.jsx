@@ -1,24 +1,13 @@
-// 'use client';
-
-// const About = () => (
-//   <section>
-//     About section
-//   </section>
-// );
-
-// export default About;
-
 'use client';
 
 import { motion } from 'framer-motion';
 import { TypingText } from '../components';
-
 import styles from '../styles';
 import { fadeIn, staggerContainer } from '../utils/motion';
 
 const About = () => (
-  <section className={`${styles.paddings} relative z-10`}>
-    <div className="gradient-02 z-0" />
+  <section className={`${styles.paddings} flex items-center h-screen w-screen relative z-10`}>
+    {/* <div className="gradient-02 z-0" /> */}
     <motion.div
       variants={staggerContainer}
       initial="hidden"
@@ -26,22 +15,26 @@ const About = () => (
       viewport={{ once: false, amount: 0.25 }}
       className={`${styles.innerWidth} mx-auto ${styles.flexCenter} flex-col`}
     >
-      <TypingText title="| About Metaversus" textStyles="text-center" />
+      <TypingText title="| About Me" textStyles="text-center" />
 
       <motion.p
         variants={fadeIn('up', 'tween', 0.2, 1)}
-        className="mt-[8px] font-normal sm:text-[32px] text-[20px] text-center text-secondary-white"
+        className="mt-[22px] font-normal md:text-[26px] sm:text-[20px] text-[16px] text-center text-secondary-white"
       >
-        <span className="font-extrabold text-white">TEmp</span> temp temp temp temp
+        Hi! My name is Feiyu Lin and I'm currently study Computer Science at the University of Ottawa.
+        
+        
         temp temp temp temptemp temp temp temptemp temp temp temp
         temp temp temp temp
         temp temp temp temptemp temp temp temptemp temp temp temptemp temp temp temptemp temp temp temp
-        temp temp temp temptemp temp temp temp
+        temp temp temp temptemp temp temp ALSKJDLAKSJD
         {' '}
         <span className="font-extrabold text-white">
+        AAAAAA temp temp temp
+        </span>
+        {' '}
         temp temp temp temp
-        </span>{' '}
-        temp temp temp temp{' '}
+        {' '}
         <span className="font-extrabold text-white">temp temp temp temp</span> temp temp temp temptemp temp temp tempte
         mp temp temp temptemp temp temp temptemp temp temp temp{' '}
         <span className="font-extrabold text-white">temp temp temp temp</span>temp temp temp temptemp temp temp temptemp temp temp temp
