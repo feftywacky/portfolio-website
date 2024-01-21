@@ -17,10 +17,10 @@ const Explore = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
-        className={`${styles.innerWidth} mx-auto flex flex-col mt-[50px] md:mt-[100px]`}
+        className={`${styles.innerWidth} mx-auto flex flex-col mt-[50px] md:mt-[50px]`}
       >
         <TypingText title="| My Projects" textStyles="text-center"/>
-        <div className=" mt-[20px] md:mt-[3 0px] lg:mt-[40px] flex lg:flex-row flex-col min-h-[70vh] md:min-h-[60vh] lg:min-h-[50vh] gap-5 border-2 border-blue-500">
+        <div className=" mt-[20px] md:mt-[3 0px] lg:mt-[40px] flex lg:flex-row flex-col min-h-[70vh] md:min-h-[60vh] lg:min-h-[50vh] gap-5">
           {projects.map((project, index) => (
             <ExploreCard
               key={project.id}

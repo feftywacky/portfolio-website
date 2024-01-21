@@ -129,7 +129,7 @@ const Navbar = () => {
           <TextButton href="#top" buttonText="Home" />
           <TextButton href="#about" buttonText="About" />
           <TextButton href="#explore" buttonText="Projects" />
-          <TextButton href="#hero" buttonText="Skills" />
+          <TextButton href="#skills" buttonText="Skills" />
         </div>
 
         <div className="flex justify-center sm:justify-start items-center gap-6 pt-3 sm:pt-0">
