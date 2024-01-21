@@ -4,6 +4,29 @@ import { motion } from 'framer-motion';
 
 import styles from '../styles';
 import { fadeIn } from '../utils/motion';
+import { NavButton, redirectToGithub } from './Navbar.jsx';
+
+const redirectToSpaceship = () => {
+  window.open('https://github.com/feftywacky/spaceship-shoot-game', '_blank');
+}
+
+const redirectToChessEngine = () => {
+  window.open('https://github.com/feftywacky/Thrawn', '_blank');
+}
+
+const redirectToKmap = () => {
+  window.open('https://github.com/michaelhum28/kmap-solver', '_blank');
+}
+
+const redirectToMedihub = () => {
+  window.open('https://github.com/uOttawaSEGA2023/Medihub', '_blank');
+}
+
+const redirectToGenerativeAI = () => {
+  window.open('https://github.com/feftywacky', '_blank');
+}
+
+
 
 const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => (
   <motion.div
@@ -27,22 +50,40 @@ const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => (
       <div className={`absolute bottom-0 p-8 flex justify-start w-full flex-col bg-[rgba(0,0,0,0.5)] rounded-b-[24px]`}>
         <div className={`flex flex-row space-x-3`}>
           <div
-            className={`${styles.flexCenter} w-[60px] h-[60px] rounded-[24px] glassmorphism`}
+            className={`${styles.flexCenter} w-[60px] h-[60px] rounded-[24px] glassmorphism hover:scale-110`}
           >
             <img
               src="/github.svg"
               alt="github"
-              className="w-full h-full object-contain"
+              className="w-full h-full object-contain hover:scale-110"
+              onClick={()=>{
+                if (title === "Space Invaders") {
+                  redirectToSpaceship();
+                } else if (title === "Chess Engine") {
+                  redirectToChessEngine();
+                }
+                else if (title === "Karnaugh Map Solver") {
+                  redirectToKmap();
+                }
+                else if (title === "Healthcare Management App") {
+                  redirectToMedihub();
+                }
+                else if (title === "Generative AI Fullstack App") {
+                  redirectToGenerativeAI();
+                }
+              }}
+              style={{ transform: 'scale(1.1)'}}
             />
+            
           </div>
 
           <div
-            className={`${styles.flexCenter} w-[60px] h-[60px] rounded-[24px] glassmorphism`}
+            className={`${styles.flexCenter} w-[60px] h-[60px] rounded-[24px] glassmorphism hover:scale-110`}
           >
             <img
-              src="/export.png"
-              alt="github"
-              className="w-[60%] h-[60%] object-contain"
+              src="/expand.png"
+              alt="expand"
+              className="w-[60%] h-[60%] object-contain hover:scale-110"
             />
           </div>
         </div>
