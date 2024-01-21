@@ -119,8 +119,8 @@ const Navbar = () => {
       variants={navVariants}
       initial="hidden"
       whileInView="show"
-      className={`${styles.xPaddings} pb-4 pt-4 sm:pb-12 sm:pt-10 py-8 fixed top-0 w-full z-50`}
-      style={{ backdropFilter: 'blur(10px)', backgroundColor: "rgba(0,0,0,0.3)" }}
+      className={`${styles.xPaddings} pb-4 pt-4 py-8 sm:pb-8 sm:pt-6 fixed top-0 w-full z-50 border-2 border-purple-500`}
+      style={{ backdropFilter: 'blur(8px)', backgroundColor: "rgba(0,0,0,0.3)" }}
     >
 
       {/* <div className="absolute w-[75%] inset-0 gradient-01" /> */}

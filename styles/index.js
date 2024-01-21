@@ -13,6 +13,14 @@ const styles = {
   flexEnd: 'flex justify-end',
   navPadding: 'pt-[98px]',
 
+  squareSizes: {
+      base: 'w-[50px] h-[50px]',
+      sm: 'sm:w-[100px] sm:h-[100px]',
+      md: 'md:w-[200px] md:h-[200px]',
+      lg: 'lg:w-[250px] lg:h-[250px]',
+      xl: 'xl:w-[300px] xl:h-[300px]',
+    },
+
   // hero section
   heroHeading:
       'text-white mb-1 text-4xl md:text-6xl lg:text-8xl lg:leading-normal font-extrabold',
