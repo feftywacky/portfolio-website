@@ -20,8 +20,9 @@ module.exports = {
       },
 
       screens: {
+        'projects_lg': '1070px',
         'lg': '1025px',
-        'mini': '400px',
+        'mini': '390px',
       },
       
       transitionTimingFunction: {

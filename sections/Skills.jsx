@@ -10,8 +10,6 @@ import { ExploreCard, TypingText } from '../components';
 
 const Skills = () => {
 
-    const gridSize = 6;
-
     const skill = ({ onClick, svgPath1, svgPath2, svgPath3, svgPath4 }) => {
         const [hoverKey, setHoverKey] = useState(false);
         const [isHovered, setIsHovered] = useState(false);
@@ -115,7 +113,7 @@ const Skills = () => {
                         <motion.div
 
                             key={i}
-                            className="w-[78px] h-[78px] border-2 text-white flex items-center justify-center"
+                            className="w-[78px] h-[78px] text-white flex items-center justify-center rounded-[8px] bg-pink-500"
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: isHiddenIndex ? 0 : 1 }}
                             transition={{ duration: 0.2, delay: i * 0.05 }}

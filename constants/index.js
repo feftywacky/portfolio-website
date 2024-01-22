@@ -27,6 +27,14 @@ export const projects = [
   },
 ];
 
+export const getImageUrlByTitle = (title) => {
+  if (title === 'Space Invaders') {
+    return '/spaceship5.jpg';
+  }
+  const project = projects.find(project => project.title === title);
+  return project ? project.imgUrl : '/chess_engine.jpg';
+}
+
 export const startingFeatures = [
   'Find a world that suits you and you want to enter',
   'Enter the world by reading basmalah to be safe',
