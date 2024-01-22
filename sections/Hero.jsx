@@ -58,13 +58,13 @@ const Hero = () => {
 
 
   return (
-    <section className={`${styles.yPaddings} sm:pl-16 pl-6 flex items-center h-screen w-screen bg-hero-gradient`}>
+    <section className={`${styles.xPaddings} flex items-center justify-center h-screen w-screen bg-hero-gradient`}>
       <motion.div
         variants={staggerContainer}
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
-        className={`${styles.innerWidth} mx-auto flex flex-col lg:flex-row mt-[-50px] lg:mt-[-180px] justify-between items-center`}
+        className={`${styles.innerWidth} mx-auto flex flex-col lg:flex-row justify-between items-center`}
       >
         <div className="name mini:mt-[-50px] mb-[50px] md:mt-[100px] md:mb-0">
         <motion.div variants={slideIn('left', 'tween', 0.2, 1)}
@@ -142,7 +142,7 @@ const Hero = () => {
         </div>
           
 
-        <div className="pfp md:mr-[70px] md:mt-[20px] lg:mt-[70px] ">
+        <div className="pfp md:mt-[20px] lg:mt-[70px] ">
         <motion.div
           variants={slideIn('right', 'tween', 0.2, 1)}
           className="col-span-4 place-self-center mt-4 lg:mt-0 "
