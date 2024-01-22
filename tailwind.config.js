@@ -53,6 +53,17 @@ module.exports = {
           "linear-gradient(rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.05) 100%)",
       },
 
+      animation: {
+        'border-blink': 'border-blink 2s ease-out infinite'
+      },
+      keyframes: {
+        'border-blink': {
+          '0%': { borderColor: 'rgba(255, 255, 255, 0.5)' },
+          '50%': { borderColor: '#FFF' },
+          '100%': { borderColor: 'rgba(255, 255, 255, 0.5)' }
+        }
+      },      
+
 
     },
   },

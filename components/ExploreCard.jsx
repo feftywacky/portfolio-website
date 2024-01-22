@@ -47,14 +47,14 @@ const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => {
       <motion.div
         variants={fadeIn('up', 'easeOut', index * 0.5, 0.75)}
         className={`relative ${active === id ? 'lg:flex-[3.5] flex-[10]' : 'lg:flex-[0.5] flex-[2]'
-          } flex items-center justify-center min-w-[170px] xl:h-[550px] transition-[flex] duration-[0.7s] ease-out-flex cursor-pointer overflow-hidden`}
+          } flex items-center justify-center min-w-[170px] h-[400px] xl:h-[500px] transition-[flex] duration-[0.7s] ease-out-flex cursor-pointer overflow-hidden`}
         whileHover={() => handleClick(id)}
         onClick={() => handleClick(id)}
       >
         <img
           src={imgUrl}
           alt="project"
-          className="absolute w-full h-full object-cover rounded-[24px]"
+          className="absolute w-full h-full object-cover rounded-[24px] hover:border-2 hover:animate-border-blink"
         />
         {active !== id ? (
           <h3
@@ -94,6 +94,7 @@ const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => {
 
               <div
                 className={`${styles.flexCenter} w-[60px] h-[60px] rounded-[24px] glassmorphism hover:scale-110`}
+                onClick={toggleModal}
               >
                 <img
                   src="/expand.png"
@@ -123,9 +124,9 @@ const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => {
           }}
           className={`fixed top-0 left-0 w-full h-full flex items-center justify-center z-50`}
           onClick={toggleModal}
-          style={{ backdropFilter: 'blur(10px)' }}
+          style={{ backdropFilter: 'blur(10px)', backgroundColor: 'rgba(0,0,0,0.7)' }}
         >
-          {isModalOpen && <ExploreModal title={title} isModalOpen={isModalOpen} toggleModal={toggleModal} />}
+          {isModalOpen && <ExploreModal title={title} />}
         </motion.div>
         )}
       </AnimatePresence>

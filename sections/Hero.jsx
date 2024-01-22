@@ -67,95 +67,93 @@ const Hero = () => {
         className={`${styles.innerWidth} mx-auto flex flex-col lg:flex-row justify-between items-center`}
       >
         <div className="name mini:mt-[-50px] mb-[50px] md:mt-[100px] md:mb-0">
-        <motion.div variants={slideIn('left', 'tween', 0.2, 1)}
-        >
-          {hi.map((char, index) => (
-            <motion.span key={index}
+          <motion.div variants={slideIn('left', 'tween', 0.2, 1)}
+          >
+            {hi.map((char, index) => (
+              <motion.span key={index}
 
-              animate={animation_hi[index]}
-              onMouseOver={() => bounceAnimation(index, animation_hi, isBouncingHi, setIsBouncingHi)}
-              onAnimationComplete={() => setIsBouncingHi(prevState => {
-                const newState = [...prevState];
-                newState[index] = false;
-                return newState;
-              })}
+                animate={animation_hi[index]}
+                onMouseOver={() => bounceAnimation(index, animation_hi, isBouncingHi, setIsBouncingHi)}
+                onAnimationComplete={() => setIsBouncingHi(prevState => {
+                  const newState = [...prevState];
+                  newState[index] = false;
+                  return newState;
+                })}
 
-              variants={textVariant(1.1)}
-              className={styles.heroHeading}
-              style={{
-                display: 'inline-block',
-                lineHeight: '1',
-                padding: '0',
-              }}>
-              {char}
-            </motion.span>
-          ))}
-        </motion.div>
+                variants={textVariant(1.1)}
+                className={styles.heroHeading}
+                style={{
+                  display: 'inline-block',
+                  lineHeight: '1',
+                  padding: '0',
+                }}>
+                {char}
+              </motion.span>
+            ))}
+          </motion.div>
 
-        <motion.div variants={slideIn('left', 'tween', 0.2, 1)}>
-          {myName.map((char, index) => (
-            <motion.span
+          <motion.div variants={slideIn('left', 'tween', 0.2, 1)}>
+            {myName.map((char, index) => (
+              <motion.span
 
-              key={index}
-              animate={animation_name[index]}
-              onMouseOver={() => bounceAnimation(index, animation_name, isBouncingName, setIsBouncingName)}
-              onAnimationComplete={() => setIsBouncingName(prevState => {
-                const newState = [...prevState];
-                newState[index] = false;
-                return newState;
-              })}
+                key={index}
+                animate={animation_name[index]}
+                onMouseOver={() => bounceAnimation(index, animation_name, isBouncingName, setIsBouncingName)}
+                onAnimationComplete={() => setIsBouncingName(prevState => {
+                  const newState = [...prevState];
+                  newState[index] = false;
+                  return newState;
+                })}
 
-              variants={textVariant(1.2)}
-              className={styles.heroHeading}
-              style={{
-                display: 'inline-block',
-                lineHeight: '1',
-                padding: '0',
-              }}
-            >
-              {char === " " ? "\u00A0" : char}
-            </motion.span>
-          ))}
-        </motion.div>
+                variants={textVariant(1.2)}
+                className={styles.heroHeading}
+                style={{
+                  display: 'inline-block',
+                  lineHeight: '1',
+                  padding: '0',
+                }}
+              >
+                {char === " " ? "\u00A0" : char}
+              </motion.span>
+            ))}
+          </motion.div>
 
 
-        <motion.div
-          variants={{...textVariant(1.3),...slideIn('left', 'tween', 0.2, 1)}}
-          className="flex flex-row justify-start items-start"
-        >
-          <div className={styles.heroSubheading}>
-            <TypeAnimation
-              sequence={[
-                "Software Developer",
-                1500,
-                "Frontend Developer",
-                1500,
-                "UI/UX Designer",
-                1500,
-              ]}
-              wrapper="span"
-              speed={50}
-              repeat={Infinity}
-            />
-          </div>
-        </motion.div>
+          <motion.div
+            variants={{ ...textVariant(1.3), ...slideIn('left', 'tween', 0.2, 1) }}
+            className="flex flex-row justify-start items-start"
+          >
+            <div className={styles.heroSubheading}>
+              <TypeAnimation
+                sequence={[
+                  "Software Developer",
+                  1500,
+                  "Frontend Developer",
+                  1500,
+                  "UI/UX Designer",
+                  1500,
+                ]}
+                wrapper="span"
+                speed={50}
+                repeat={Infinity}
+              />
+            </div>
+          </motion.div>
         </div>
-          
 
-        <div className="pfp md:mt-[20px] lg:mt-[70px] ">
-        <motion.div
-          variants={slideIn('right', 'tween', 0.2, 1)}
-          className="col-span-4 place-self-center mt-4 lg:mt-0 "
-        >
-          <div className="rounded-full w-[250px] h-[250px] md:w-[360px] md:h-[360px] lg:w-[490px] lg:h-[490px] relative overflow-hidden">
+
+          <motion.div
+            variants={slideIn('right', 'tween', 0.2, 1)}
+            className="col-span-4 place-self-center mt-4 md:mt-[20px] lg:mt-[70px] rounded-full
+          w-[250px] h-[250px] md:w-[360px] md:h-[360px] lg:w-[440px] xl:w-[490px] lg:h-[440px] xl:h-[490px] relative overflow-hidden"
+          >
             <img
               src="/pfp.jpg"
               alt="hero_pfp"
               className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
             />
-          </div>
-        </motion.div>
-      </div>
+          </motion.div>
+                
 
 
       </motion.div>

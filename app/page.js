@@ -6,9 +6,9 @@ const Page = () => (
   <div className="bg-background overflow-hidden">
     <Navbar />
       <div id="hero" className="bg-page-gradient h-screen"><Hero /></div>
-      <div id="about" className="bg-hero-gradient h-screen border-2 border-green-500"><About /></div>
-      <div id="explore" className="bg-hero-gradient h-screen border-2 border-purple-500"><Explore /></div>
-      <div id="skills" className="bg-hero-gradient h-screen border-2 border-blue-500"><Skills /></div>
+      <div id="about" className="bg-hero-gradient h-screen"><About /></div>
+      <div id="explore" className="bg-hero-gradient h-screen"><Explore /></div>
+      <div id="skills" className="bg-hero-gradient h-screen"><Skills /></div>
       <Feedback />
     <Footer />
   </div>
