@@ -123,7 +123,7 @@ const Navbar = () => {
       initial="hidden"
       whileInView="show"
       className={`${styles.xPaddings} pb-4 pt-4 py-8 sm:pb-8 sm:pt-6 fixed top-0 w-full z-50`}
-      style={{ backdropFilter: 'blur(8px)', backgroundColor: "rgba(0,0,0,0.3)" }}
+      style={{ backdropFilter: 'blur(8px)' }}
     >
 
       {/* <div className="absolute w-[75%] inset-0 gradient-01" /> */}

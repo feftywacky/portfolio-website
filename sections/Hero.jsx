@@ -58,7 +58,7 @@ const Hero = () => {
 
 
   return (
-    <section className={`${styles.yPaddings} sm:pl-16 pl-6 flex items-center h-screen w-screen`}>
+    <section className={`${styles.yPaddings} sm:pl-16 pl-6 flex items-center h-screen w-screen bg-hero-gradient`}>
       <motion.div
         variants={staggerContainer}
         initial="hidden"
@@ -142,12 +142,12 @@ const Hero = () => {
         </div>
           
 
-        <div className="pfp md:mr-[70px] md:mt-[20px] lg:mt-[70px]">
+        <div className="pfp md:mr-[70px] md:mt-[20px] lg:mt-[70px] ">
         <motion.div
           variants={slideIn('right', 'tween', 0.2, 1)}
-          className="col-span-4 place-self-center mt-4 lg:mt-0"
+          className="col-span-4 place-self-center mt-4 lg:mt-0 "
         >
-          <div className="rounded-full bg-[#181818] w-[250px] h-[250px] md:w-[360px] md:h-[360px] lg:w-[490px] lg:h-[490px] relative overflow-hidden ">
+          <div className="rounded-full w-[250px] h-[250px] md:w-[360px] md:h-[360px] lg:w-[490px] lg:h-[490px] relative overflow-hidden">
             <img
               src="/pfp.jpg"
               alt="hero_pfp"

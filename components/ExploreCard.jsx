@@ -112,22 +112,22 @@ const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => {
       </motion.div>
 
       <AnimatePresence>
-          {isModalOpen && (<motion.div
-           initial={{ opacity: 0, scale: 0.7, y: "10vh" }}
-           animate={{ opacity: 1, scale: 1, y: "0vh" }}
-           exit={{ opacity: 0, scale: 0.7, y: "-10vh" }}
-           transition={{ 
-               opacity: { duration: 0.3 },
-               scale: { duration: 0.3 }
-            
-           }}
-           className={`fixed top-0 left-0 w-full h-full flex items-center justify-center z-50`}
-                    onClick={toggleModal}
-                    style={{ backdropFilter: 'blur(10px)' }}
-            >
-        {isModalOpen && <ExploreModal title={title} isModalOpen={isModalOpen} toggleModal={toggleModal} />}
+        {isModalOpen && (<motion.div
+          initial={{ opacity: 0, scale: 0.7, y: "10vh" }}
+          animate={{ opacity: 1, scale: 1, y: "0vh" }}
+          exit={{ opacity: 0, scale: 0.7, y: "-10vh" }}
+          transition={{
+            opacity: { duration: 0.3 },
+            scale: { duration: 0.3 }
+
+          }}
+          className={`fixed top-0 left-0 w-full h-full flex items-center justify-center z-50`}
+          onClick={toggleModal}
+          style={{ backdropFilter: 'blur(10px)' }}
+        >
+          {isModalOpen && <ExploreModal title={title} isModalOpen={isModalOpen} toggleModal={toggleModal} />}
         </motion.div>
-          )}
+        )}
       </AnimatePresence>
     </>
   );
