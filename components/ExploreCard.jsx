@@ -3,27 +3,26 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import styles from '../styles';
 import { fadeIn } from '../utils/motion';
-import { NavButton, redirectToGithub } from './Navbar.jsx';
 import { useState, useEffect } from 'react';
 import { ExploreModal } from './ExploreModal.jsx';
 
-const redirectToSpaceship = () => {
+export const redirectToSpaceship = () => {
   window.open('https://github.com/feftywacky/spaceship-shoot-game', '_blank');
 }
 
-const redirectToChessEngine = () => {
+export const redirectToChessEngine = () => {
   window.open('https://github.com/feftywacky/Thrawn', '_blank');
 }
 
-const redirectToKmap = () => {
+export const redirectToKmap = () => {
   window.open('https://github.com/michaelhum28/kmap-solver', '_blank');
 }
 
-const redirectToMedihub = () => {
+export const redirectToMedihub = () => {
   window.open('https://github.com/uOttawaSEGA2023/Medihub', '_blank');
 }
 
-const redirectToGenerativeAI = () => {
+export const redirectToGenerativeAI = () => {
   window.open('https://github.com/feftywacky', '_blank');
 }
 
@@ -114,13 +113,15 @@ const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => {
 
       <AnimatePresence>
         {isModalOpen && (<motion.div
-          initial={{ opacity: 0, scale: 0.7, y: "10vh" }}
-          animate={{ opacity: 1, scale: 1, y: "0vh" }}
-          exit={{ opacity: 0, scale: 0.7, y: "-10vh" }}
+          initial={{ opacity: 0, scale: 0.8,  }}
+          animate={{ opacity: 1, scale: 1,  }}
+          exit={{ opacity: 0, scale: 0.8,  }}
           transition={{
-            opacity: { duration: 0.3 },
-            scale: { duration: 0.3 }
-
+            type: "spring",
+            damping: 20,
+            stiffness: 100,
+            opacity: { duration: 0.3, ease: "easeInOut" },
+            scale: { duration: 0.3, ease: "easeInOut" },
           }}
           className={`fixed top-0 left-0 w-full h-full flex items-center justify-center z-50`}
           onClick={toggleModal}

@@ -2,7 +2,7 @@
 
 import { motion, AnimatePresence } from 'framer-motion';
 import styles from '../styles';
-import { getImageUrlByTitle } from '../constants';
+import { getImageUrlByTitle, getProjectTextByTitle } from './query.js';
 
 
 export const ExploreModal = ({ title }) => {
@@ -13,12 +13,7 @@ export const ExploreModal = ({ title }) => {
             <div className="flex-1 mr-4">
                 <h2 className="text-white text-xl lg:text-2xl font-bold mb-4">{title}</h2>
                 <p className="text-white mb-4 text-sm md:text-base lg:text-lg">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
-                    perferendis suscipit officia recusandae, eveniet quaerat assumenda
-                    id fugit, dignissimos maxime non natus placeat illo iusto!
-                    Sapiente dolorum id maiores dolores? Illum pariatur possimus
-                    quaerat ipsum quos molestiae rem aspernatur dicta tenetur. Sunt
-                    placeat tempora vitae enim incidunt porro fuga ea.
+                    {getProjectTextByTitle(title)}
                 </p>
             </div>
 
