@@ -2,13 +2,13 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 
 
-export const SkillIcon = ({ onClick, svgPath1, svgPath2, svgPath3, svgPath4, svgPath5, svgPath6, svgPath7, svgPath8, color, duration }) => {
+export const SkillIcon = ({ onClick, svgPath1, svgPath2, svgPath3, svgPath4, svgPath5, svgPath6, svgPath7, svgPath8, color, duration, onHover }) => {
     const [hoverKey, setHoverKey] = useState(false);
     const [isHovered, setIsHovered] = useState(false);
     const [hoverColor, setHoverColor] = useState("rgba(255, 255, 255, 1)");
   
     if (!duration)
-      duration = 2;
+      duration = 0.3;
   
     if (!color)
       color = "#FFFFFF";
@@ -32,16 +32,19 @@ export const SkillIcon = ({ onClick, svgPath1, svgPath2, svgPath3, svgPath4, svg
   
     return (
       <motion.button
-        className="w-full h-full flex items-center justify-center transition-all duration-300 z-10 transform border-2 border-green-400"
+        className="w-full h-full flex items-center justify-center transition-all duration-300 z-10 transform"
         onClick={onClick}
-        whileHover={{ scale: 1.15, transition: { duration: 0 } }}
   
         onMouseEnter={() => { setIsHovered(true); setHoverColor(color); }}
         onMouseLeave={() => { setIsHovered(false); setHoverColor("rgba(255, 255, 255, 1)"); }}
   
         onHoverEnd={() => setHoverKey(prevKey => prevKey + 1)}
+        
       >
-        <motion.svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" className="skill_item w-full h-full border-2 border-red-500" >
+        <motion.svg 
+          viewBox={"0 0 512 512"} 
+          xmlns="http://www.w3.org/2000/svg" 
+          className="skill_item" >
           <motion.path
             key={hoverKey + "path1"}
             d={svgPath1}

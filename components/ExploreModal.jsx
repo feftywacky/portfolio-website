@@ -7,9 +7,9 @@ import { getImageUrlByTitle, getProjectTextByTitle } from './query.js';
 
 export const ExploreModal = ({ title }) => {
     return (
-        <div className="flex flex-col lg:flex-row lg:justify-start bg-background bg-hero-gradient bg-opacity-75
+        <div className="flex flex-col lg:flex-row lg:justify-start glass-effect
                     p-6 lg:p-10 rounded-[24px] relative 
-                    w-4/5 min-h-4/5 mini:w-3/4 mini:min-h-1/2 sm:h-2/3 lg:w-2/3 lg:min-h-2/3 border-2 animate-border-blink">
+                    w-4/5 min-h-4/5 mini:w-3/4 mini:min-h-1/2 sm:h-2/3 lg:w-2/3 lg:min-h-2/3">
             <div className="flex-1 mr-4">
                 <h2 className="text-white text-xl lg:text-2xl font-bold mb-4">{title}</h2>
                 <p className="text-white mb-4 text-sm md:text-base lg:text-lg">
@@ -30,3 +30,5 @@ export const ExploreModal = ({ title }) => {
         </div>
     )
 }
+
+export default ExploreModal;

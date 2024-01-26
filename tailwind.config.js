@@ -9,6 +9,13 @@ module.exports = {
   mode: 'jit',
   theme: {
     extend: {
+
+      backdropFilter: {
+        'none': 'none',
+        'blur': 'blur(20px)',
+      },
+
+
       colors: {
         'primary-black': '#1A232E',
         'secondary-white': '#c7c7c7',
@@ -17,6 +24,7 @@ module.exports = {
         "transparent-white": "rgba(255, 255, 255, 0.08)",
         background: "#000212",
         background_light: "#141414",
+        background_light_2: "#2b2b2b",
         grey_light: "#A8A8A8",
         "grey-dark": "#222326",
         "primary-text": "#b4bcd0",
@@ -66,6 +74,12 @@ module.exports = {
       },      
 
 
+    },
+  },
+  variants: {
+    extend: {
+      // Enable backdrop-filter utilities for hover, focus and active states
+      backdropFilter: ['hover', 'focus', 'active'],
     },
   },
   plugins: [],

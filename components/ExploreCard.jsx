@@ -5,6 +5,7 @@ import styles from '../styles';
 import { fadeIn } from '../utils/motion';
 import { useState, useEffect } from 'react';
 import { ExploreModal } from './ExploreModal.jsx';
+import { GlowLamp } from './GlowLamp.jsx';
 
 export const redirectToSpaceship = () => {
   window.open('https://github.com/feftywacky/spaceship-shoot-game', '_blank');
@@ -43,6 +44,7 @@ const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => {
 
   return (
     <>
+    <GlowLamp color="40,87,255" colorDark="48,58,117">
       <motion.div
         variants={fadeIn('up', 'easeOut', index * 0.5, 0.75)}
         className={`relative ${active === id ? 'lg:flex-[3.5] flex-[10]' : 'lg:flex-[0.5] flex-[2]'
@@ -131,6 +133,7 @@ const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => {
         </motion.div>
         )}
       </AnimatePresence>
+      </GlowLamp>
     </>
   );
 };
