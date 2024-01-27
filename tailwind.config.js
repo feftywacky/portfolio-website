@@ -73,13 +73,6 @@ module.exports = {
         }
       },      
 
-
-    },
-  },
-  variants: {
-    extend: {
-      // Enable backdrop-filter utilities for hover, focus and active states
-      backdropFilter: ['hover', 'focus', 'active'],
     },
   },
   plugins: [],
