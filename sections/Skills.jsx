@@ -36,7 +36,7 @@ const Skills = () => {
     }
 
     return (
-        <GlowLamp color="40,87,255" colorDark="48,58,117" className={`${styles.paddings} flex flex-col items-center`} id="skills">
+        <GlowLamp color="194,97,254" colorDark="53,42,79" className={`${styles.paddings} flex flex-col items-center`} id="skills">
 
                 {/* <motion.div
                     variants={staggerContainer}
