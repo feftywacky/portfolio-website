@@ -9,8 +9,8 @@ const PageTitle = ({title}) => {
   });
 
   return (
-    <div ref={ref} className={`relative before:absolute before:inset-0 before:bg-[radial-gradient(ellipse_50%_50%_at_center,rgba(var(--feature-color),0.1),transparent)] max-w-[90%] text-center`}>
       <motion.h2 
+        ref={ref}
         className="text-gradient mb-11 pt-[12rem] text-center text-2xl duration-1000 ease-in-out md:pt-0 sm:text-4xl lg:text-7xl"
         initial={{ opacity: 0, y: "10%" }}
         animate={{ opacity: inView ? 1 : 0, y: inView ? "-50%" : "10%" }} 
@@ -18,7 +18,6 @@ const PageTitle = ({title}) => {
       >
         {title}
       </motion.h2>
-    </div>
   );
 };
 

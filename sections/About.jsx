@@ -28,7 +28,7 @@ const About = () => (
 
         <motion.p
           variants={fadeIn('up', 'tween', 0.2, 1)}
-          className="mt-[22px] font-normal md:text-[26px] sm:text-[20px] text-[16px] text-center text-gradient"
+          className="mt-[22px] font-normal md:text-[26px] sm:text-[20px] text-[16px] text-center text-gradient z-10"
         >
           Hi! My name is Feiyu Lin and I'm currently study Computer Science at the University of Ottawa.
 

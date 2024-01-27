@@ -20,3 +20,16 @@ const Page = () => {
 export default Page;
 
 
+
+/*
+TODO
+
+- [ ] fix weird circle too bright for lamp colour gradient, could be because of background
+- [ ] make it mobile reponsive
+- [ ] add skills
+- [ ] edit explore popup card
+- [ ] make project card transitions smoother
+- [ ] fill in popup card with project info
+
+*/
+
