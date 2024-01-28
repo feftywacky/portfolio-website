@@ -24,7 +24,6 @@ const Explore = () => {
           whileInView="show"
           viewport={{ once: false, amount: 0.25 }}
           className={`${styles.innerWidth} mx-auto flex flex-col`}
-
         >
           <div className={`${styles.innerWidth} mx-auto ${styles.flexCenter} mb-[-1rem] lg:mb-[0rem] flex-col`}>
             <PageTitle

@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { TypingText } from '../components';
 import styles from '../styles';
 import { fadeIn, staggerContainer } from '../utils/motion';
 import GlowLamp from '../components/GlowLamp';
@@ -25,11 +24,9 @@ const About = () => (
             </>
           } />
 
-        {/* <TypingText title="| About Me" textStyles="text-center" /> */}
-
         <motion.p
-          variants={fadeIn('up', 'tween', 0.2, 1)}
-          className={`${styles.xPaddings} mt-[2rem] md:mt-[3rem] font-normal md:text-[26px] sm:text-[20px] text-[14px] text-center text-gradient z-10`}
+          variants={fadeIn('up', 'tween', 1.5, 1)}
+          className={`${styles.xPaddings} mt-[2rem] md:mt-[3rem] font-normal md:text-[24px] mini:text-[18px] text-[14px] text-center text-white z-10`}
         >
           Hi! My name is Feiyu Lin and I'm currently study Computer Science at the University of Ottawa.
 
@@ -41,22 +38,15 @@ const About = () => (
           temp temp temp temptemp temp temp temptemp temp temp temptemp temp temp temptemp temp temp temp
           temp temp temp temptemp temp temp ALSKJDLAKSJD
           {' '}
-          <span className="font-extrabold text-gradient">
+          <span className="font-extrabold text-white">
             AAAAAA temp temp temp
           </span>
           {' '}
           temp temp temp temp
           {' '}
-          <span className="font-extrabold text-gradient">temp temp temp temp</span> temp temp temp temptemp temp temp tempte
+          <span className="font-extrabold text-white">temp temp temp temp</span> temp temp temp temptemp temp temp tempte
           mp temp temp temptemp temp temp
         </motion.p>
-
-        {/* <motion.img
-          variants={fadeIn('up', 'tween', 0.3, 1)}
-          src="/arrow-down.svg"
-          alt="arrow down"
-          className="w-[18px] h-[28px] object-contain mt-[28px] z-10"
-        /> */}
       </motion.div>
     </GlowLamp>
   </div>

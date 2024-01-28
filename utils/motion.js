@@ -101,7 +101,7 @@ export const fadeIn = (direction, type, delay, duration) => ({
     opacity: 1,
     transition: {
       type,
-      delay,
+      delay: delay,
       duration,
       ease: 'easeOut',
     },
@@ -146,7 +146,7 @@ export const footerVariants = {
     opacity: 0,
     y: 50,
     transition: {
-      type: 'spring',
+      type: 'linear',
       stiffness: 300,
       damping: 140,
     },
@@ -155,9 +155,9 @@ export const footerVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      type: 'spring',
+      type: 'linear',
       stiffness: 80,
-      delay: 0.5,
+      delay: 1.25,
     },
   },
 };
