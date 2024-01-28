@@ -11,7 +11,7 @@ const PageTitle = ({title}) => {
   return (
       <motion.h2 
         ref={ref}
-        className="text-gradient mb-11 pt-[12rem] text-center text-2xl duration-1000 ease-in-out md:pt-0 sm:text-4xl lg:text-7xl"
+        className="text-gradient pb-2 mb-9 pt-[12rem] text-center text-2xl duration-1000 ease-in-out md:pt-0 sm:text-4xl lg:text-7xl"
         initial={{ opacity: 0, y: "10%" }}
         animate={{ opacity: inView ? 1 : 0, y: inView ? "-50%" : "10%" }} 
         transition={{ duration: 0.4 }} 
