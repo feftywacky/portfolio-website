@@ -15,7 +15,7 @@ const Explore = () => {
 
   return (
 
-    <div className="flex flex-col justify-center mt-[-1rem] lg:mt-[-12rem]">
+    <div className="flex flex-col justify-center mt-[-3rem] mini:mt-[-1rem] lg:mt-[-12rem] ">
       <GlowLamp color="40,87,255" colorDark="48,58,117">
 
         <motion.div
@@ -23,10 +23,10 @@ const Explore = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: false, amount: 0.25 }}
-          className={`${styles.innerWidth} mb-[6rem] xl:mb-[0rem] mx-auto flex flex-col`}
+          className={`${styles.innerWidth} mx-auto flex flex-col`}
 
         >
-          <div className={`${styles.innerWidth} mx-auto ${styles.flexCenter} flex-col`}>
+          <div className={`${styles.innerWidth} mx-auto ${styles.flexCenter} mb-[-1rem] lg:mb-[0rem] flex-col`}>
             <PageTitle
               title={
                 <>
@@ -37,7 +37,7 @@ const Explore = () => {
           </div>
 
           {/* <TypingText title="| My Projects" textStyles="text-center" /> */}
-          <div className={`${styles.xPaddings} mt-[2rem] lg:mt-[2.5rem] flex projects_lg:flex-row flex-col min-h-[70vh] md:min-h-[60vh] lg:min-h-[50vh] gap-5 z-20`}> 
+          <div className={`${styles.xPaddings} mt-[1.5rem] mini:mt-[3rem] lg:mt-[2rem] flex projects_lg:flex-row flex-col min-h-[70vh] md:min-h-[60vh] lg:min-h-[50vh] gap-5 z-20`}> 
             {projects.map((project, index) => (
               <ExploreCard
                 key={project.id}

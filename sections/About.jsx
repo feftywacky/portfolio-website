@@ -15,7 +15,7 @@ const About = () => (
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
-        className={`${styles.innerWidth} mb-[6rem] lg:mb-0 mx-auto ${styles.flexCenter} flex-col`}
+        className={`${styles.innerWidth} mb-[6rem] md:mb-[3rem] lg:mb-[2rem] mx-auto ${styles.flexCenter} flex-col`}
       >
 
         <PageTitle
@@ -29,7 +29,7 @@ const About = () => (
 
         <motion.p
           variants={fadeIn('up', 'tween', 0.2, 1)}
-          className={`${styles.xPaddings} mt-[2rem] lg:mt-[3rem] font-normal md:text-[26px] sm:text-[20px] text-[14px] text-center text-gradient z-10`}
+          className={`${styles.xPaddings} mt-[2rem] md:mt-[3rem] font-normal md:text-[26px] sm:text-[20px] text-[14px] text-center text-gradient z-10`}
         >
           Hi! My name is Feiyu Lin and I'm currently study Computer Science at the University of Ottawa.
 

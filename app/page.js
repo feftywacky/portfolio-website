@@ -25,13 +25,13 @@ export default Page;
 TODO
 
 - [x] fix weird circle too bright for lamp colour gradient, could be because of background
-- [ ] make it mobile reponsive
+- [x] make it mobile reponsive
 - [ ] add skills
 - [ ] edit explore popup card
 - [ ] make project card transitions smoother
 - [ ] fill in popup card with project info
 - [ ] add footer
-- [ ] mess with colour combinations/ change colour of buttons to blue
+- [x] mess with colour combinations/ change colour of buttons to blue
 -> svg png 256 x 256
 
 */

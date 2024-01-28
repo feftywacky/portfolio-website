@@ -38,6 +38,7 @@ module.exports = {
 
       screens: {
         'projects_lg': '1070px',
+        'lg-minus': '1024px',
         'lg': '1025px',
         'mini': '390px',
       },

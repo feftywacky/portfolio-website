@@ -36,118 +36,121 @@ const Skills = () => {
     }
 
     return (
-        <div className="flex flex-col justify-center mt-[-2rem] lg:mt-[-12rem]">
-            <GlowLamp color="194,97,254" colorDark="53,42,79" className={`${styles.paddings} flex flex-col items-center`} id="skills">
+        <div className={` flex flex-col justify-center mt-[-2rem] lg:mt-[-12rem]`}>
+            <GlowLamp color="194,97,254" colorDark="53,42,79" >
+                <div className={`${styles.xPaddings} flex flex-col items-center`}>
 
-                {/* <motion.div
+                    {/* <motion.div
                     variants={staggerContainer}
                     initial="hidden"
                     whileInView="show"
                     viewport={{ once: false, amount: 0.25 }}
                     className='justify-center'
                 > */}
-                <div className={`${styles.innerWidth} mx-auto ${styles.flexCenter} flex-col`}>
-                    <PageTitle
-                        title={
-                            <>
-                                My Skills
-                            </>
-                        } />
+                    <div className={`${styles.innerWidth} mx-auto ${styles.flexCenter} flex-col`}>
+                        <PageTitle
+                            title={
+                                <>
+                                    My Skills
+                                </>
+                            } />
 
-                </div>
-                {/* <TypingText title="| My Skills" textStyles="text-center lg:mt-[30px] mb-[20px]" /> */}
-                {/* </motion.div> */}
+                    </div>
+                    {/* <TypingText title="| My Skills" textStyles="text-center lg:mt-[30px] mb-[20px]" /> */}
+                    {/* </motion.div> */}
 
-                <div className="grid grid-cols-3 mini:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-12 gap-3 mt-[3rem]">
-                    {Array(24).fill().map((_, i) => {
-                        const isHiddenIndex = [].includes(i);
-                        // const isHiddenIndex = [1, 7, 10,32,24,15,17,19,20,28,29].includes(i);
-                        const skill = skillSquares[i];
-                        return (
+                    <div className="grid grid-cols-3 mini:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-12 gap-3 mt-[3rem]">
+                        {Array(24).fill().map((_, i) => {
+                            const isHiddenIndex = [].includes(i);
+                            // const isHiddenIndex = [1, 7, 10,32,24,15,17,19,20,28,29].includes(i);
+                            const skill = skillSquares[i];
+                            return (
 
-                            <motion.div
+                                <motion.div
 
-                                key={i}
-                                className="w-[96px] h-[96px] flex items-center justify-center rounded-[8px] glass-effect"
-                                whileHover={{ backgroundColor: "#1a1a1a", transition: { duration: 0.3 }, border: "none", scale: 1.05 }}
-                                onMouseEnter={() => {
-                                    setIsHoverSkill(prevState => {
-                                        const newState = [...prevState];
-                                        newState[i] = true;
-                                        return newState;
-                                    });
-                                }}
-                                onMouseLeave={() => {
-                                    setIsHoverSkill(prevState => {
-                                        const newState = [...prevState];
-                                        newState[i] = false;
-                                        return newState;
-                                    });
-                                }}
-                            >
-                                {skill && (
-                                    <div className="w-3/4 h-3/4 relative flex flex-col items-center justify-center">
-                                        <AnimatePresence>
-                                            <motion.img
-                                                key={i}
-                                                src='js.png'
-                                                style={{ width: '50%', height: '50%', position: 'absolute' }}
-                                                initial={{ opacity: 0 }}
-                                                animate={{
-                                                    opacity: isHoverSkill[i] ? 1 : 0,
-                                                    y: isHoverSkill[i] ? -7 : 0,
-                                                    transition: {
-                                                        opacity: { duration: 0 },
-                                                        y: { duration: 0.3 }
-                                                    }
-                                                }}
-                                                exit={{ y: 0 }} />
-
-
-                                            <motion.div
-                                                style={{ position: 'absolute' }}
-                                                initial={{ opacity: 1 }}
-                                                animate={{
-                                                    opacity: isHoverSkill[i] ? 0 : 1,
-                                                    y: isHoverSkill[i] ? -7 : 0,
-                                                    transition: {
-                                                        opacity: { duration: 0 },
-                                                        y: { duration: 0.3 }
-                                                    }
-                                                }}
-                                                exit={{ y: 0 }}
-                                            >
-                                                <SkillIcon color={skill.color} duration={skill.duration}
-                                                    svgPath1={skill.svgPath1}
-                                                    svgPath2={skill.svgPath2}
-                                                    svgPath3={skill.svgPath3}
-                                                    svgPath4={skill.svgPath4}
-                                                    svgPath5={skill.svgPath5}
-                                                    svgPath6={skill.svgPath6}
-                                                    svgPath7={skill.svgPath7}
-                                                    svgPath8={skill.svgPath8}
-                                                    onHover={isHoverSkill[i]}
+                                    key={i}
+                                    className="w-[78px] h-[78px] lg:w-[96px] lg:h-[96px] flex items-center justify-center rounded-[8px] glass-effect"
+                                    whileHover={{ backgroundColor: "#1a1a1a", transition: { duration: 0.3 }, border: "none", scale: 1.05 }}
+                                    onMouseEnter={() => {
+                                        setIsHoverSkill(prevState => {
+                                            const newState = [...prevState];
+                                            newState[i] = true;
+                                            return newState;
+                                        });
+                                    }}
+                                    onMouseLeave={() => {
+                                        setIsHoverSkill(prevState => {
+                                            const newState = [...prevState];
+                                            newState[i] = false;
+                                            return newState;
+                                        });
+                                    }}
+                                >
+                                    {skill && (
+                                        <div className="w-3/4 h-3/4 relative flex flex-col items-center justify-center">
+                                            <AnimatePresence>
+                                                <motion.img
                                                     key={i}
-                                                />
-                                            </motion.div>
+                                                    src='js.png'
+                                                    style={{ width: '50%', height: '50%', position: 'absolute' }}
+                                                    initial={{ opacity: 0 }}
+                                                    animate={{
+                                                        opacity: isHoverSkill[i] ? 1 : 0,
+                                                        y: isHoverSkill[i] ? -7 : 0,
+                                                        transition: {
+                                                            opacity: { duration: 0 },
+                                                            y: { duration: 0.3 }
+                                                        }
+                                                    }}
+                                                    exit={{ y: 0 }} />
 
-                                        </AnimatePresence>
+
+                                                <motion.div
+                                                    style={{ position: 'absolute' }}
+                                                    initial={{ opacity: 1 }}
+                                                    animate={{
+                                                        opacity: isHoverSkill[i] ? 0 : 1,
+                                                        y: isHoverSkill[i] ? -7 : 0,
+                                                        transition: {
+                                                            opacity: { duration: 0 },
+                                                            y: { duration: 0.3 }
+                                                        }
+                                                    }}
+                                                    exit={{ y: 0 }}
+                                                >
+                                                    <SkillIcon color={skill.color} duration={skill.duration}
+                                                        svgPath1={skill.svgPath1}
+                                                        svgPath2={skill.svgPath2}
+                                                        svgPath3={skill.svgPath3}
+                                                        svgPath4={skill.svgPath4}
+                                                        svgPath5={skill.svgPath5}
+                                                        svgPath6={skill.svgPath6}
+                                                        svgPath7={skill.svgPath7}
+                                                        svgPath8={skill.svgPath8}
+                                                        onHover={isHoverSkill[i]}
+                                                        key={i}
+                                                    />
+                                                </motion.div>
+
+                                            </AnimatePresence>
 
 
-                                        {isHoverSkill[i] &&
-                                            <div className="mt-[80%]">
-                                                <p className="text-xs text-center font-semibold text-white">{skill.name}</p>
-                                            </div>
-                                        }
-                                    </div>
-                                )}
-                            </motion.div>
-                        )
-                    })}
+                                            {isHoverSkill[i] &&
+                                                <div className="mt-[80%]">
+                                                    <p className="text-xs text-center font-semibold text-white">{skill.name}</p>
+                                                </div>
+                                            }
+                                        </div>
+                                    )}
+                                </motion.div>
+                            )
+                        })}
 
-                </div>
-                {/* 
+                    </div>
+                    {/* 
             </section> */}
+                </div>
+
             </GlowLamp>
         </div>
     )

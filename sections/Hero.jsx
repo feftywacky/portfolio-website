@@ -66,7 +66,7 @@ const Hero = () => {
         viewport={{ once: false, amount: 0.25 }}
         className={`${styles.innerWidth} mx-auto flex flex-col lg:flex-row justify-between items-center`}
       >
-        <div className="name mini:mt-[-50px] mb-[50px] md:mt-[100px] md:mb-0">
+        <div className="name mini:mt-[-50px] md:mt-[2rem] mb-[50px] md:mb-[4rem]">
           <motion.div variants={slideIn('left', 'tween', 0.2, 1)}
           >
             {hi.map((char, index) => (
