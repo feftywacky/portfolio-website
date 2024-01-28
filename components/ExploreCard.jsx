@@ -53,7 +53,7 @@ const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => {
         <img
           src={imgUrl}
           alt="project"
-          className="absolute w-full h-full object-cover rounded-[24px] hover:border-2 hover:animate-border-blink"
+          className="absolute w-full h-full object-cover rounded-[24px]"
         />
         {active !== id ? (
           <h3
@@ -64,7 +64,7 @@ const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => {
           <div className={`absolute bottom-0 p-8 flex justify-start w-full flex-col bg-[rgba(0,0,0,0.5)] rounded-b-[24px]`}>
             <div className={`flex flex-row space-x-3`}>
               <div
-                className={`${styles.flexCenter} w-[60px] h-[60px] rounded-[24px] glassmorphism hover:scale-110`}
+                className={`${styles.flexCenter} w-[50px] h-[50px] md:w-[60px] md:h-[60px] rounded-[18px] md:rounded-[24px] glassmorphism hover:scale-110`}
               >
                 <img
                   src="/github.svg"
@@ -92,7 +92,7 @@ const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => {
               </div>
 
               <div
-                className={`${styles.flexCenter} w-[60px] h-[60px] rounded-[24px] glassmorphism hover:scale-110`}
+                className={`${styles.flexCenter} w-[50px] h-[50px] md:w-[60px] md:h-[60px] rounded-[18px] md:rounded-[24px] glassmorphism hover:scale-110`}
                 onClick={toggleModal}
               >
                 <img

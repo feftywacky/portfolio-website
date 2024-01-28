@@ -7,7 +7,7 @@ import GlowLamp from '../components/GlowLamp';
 import PageTitle from '../components/PageTitle';
 
 const About = () => (
-  <div className={`mt-[2rem] lg:mt-[-6rem]`} >
+  <div className={`mt-[2rem] lg:mt-[-6rem] xl:mt-[-4rem] xl:mb-[8rem]`} >
     <GlowLamp color="0,225,244" colorDark="23,70,81">
       <motion.div
         variants={staggerContainer}

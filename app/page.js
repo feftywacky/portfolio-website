@@ -7,7 +7,7 @@ const Page = () => {
     <>
       <div className="bg-background overflow-hidden">
         <Navbar />
-        <div id="hero" className="bg-page-gradient"><Hero /></div>
+        <div id="home" className="bg-page-gradient"><Hero /></div>
         <div id="about" className="flex flex-col justify-center "><About /></div>
         <div id="explore" className="flex flex-col justify-center "><Explore /></div>
         <div id="skills" className="flex flex-col justify-center "><Skills /></div>
@@ -27,7 +27,7 @@ TODO
 - [x] fix weird circle too bright for lamp colour gradient, could be because of background
 - [x] make it mobile reponsive
 - [ ] add skills
-- [ ] edit explore popup card
+- [x] edit explore popup card
 - [ ] make project card transitions smoother
 - [ ] fill in popup card with project info
 - [x] add footer
