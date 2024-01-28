@@ -29,10 +29,10 @@ TODO
 - [ ] add skills
 - [x] edit explore popup card
 - [ ] make project card transitions smoother
-- [ ] fill in popup card with project info
+- [ ] fill in all text
 - [x] add footer
 - [x] mess with colour combinations/ change colour of buttons to blue
--> svg png 256 x 256
+-> svg png 256 x 256 2% border
 
 */
 

@@ -45,8 +45,9 @@ const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => {
     <>
       <motion.div
         variants={fadeIn('up', 'easeOut', index * 0.5, 0.75)}
-        className={`relative ${active === id ? 'lg:flex-[3.5] flex-[10]' : 'lg:flex-[0.5] flex-[2]'
-          } flex items-center justify-center min-w-[170px] h-[390px] 2xl:h-[550px] transition-[flex] duration-[0.7s] ease-out-flex cursor-pointer overflow-hidden`}
+        className={`relative ${active === id ? 'lg:flex-[3.5] flex-[10]' : 'lg:flex-[0.5] flex-[2]'} 
+          flex items-center justify-center min-w-[170px] h-[390px] 2xl:h-[550px] 
+          transition-[flex] duration-[0.7s] ease-out-flex cursor-pointer overflow-hidden`}
         whileHover={() => handleClick(id)}
         onClick={() => handleClick(id)}
       >
@@ -61,7 +62,7 @@ const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => {
             {title}
           </h3>
         ) : (
-          <div className={`absolute bottom-0 p-8 flex justify-start w-full flex-col bg-[rgba(0,0,0,0.5)] rounded-b-[24px]`}>
+          <div className={`absolute bottom-0 p-4 sm:p-8 flex justify-start w-full flex-col bg-[rgba(0,0,0,0.5)] rounded-b-[24px]`}>
             <div className={`flex flex-row space-x-3`}>
               <div
                 className={`${styles.flexCenter} w-[50px] h-[50px] md:w-[60px] md:h-[60px] rounded-[18px] md:rounded-[24px] glassmorphism hover:scale-110`}
