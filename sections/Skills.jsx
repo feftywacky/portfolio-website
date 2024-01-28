@@ -36,7 +36,8 @@ const Skills = () => {
     }
 
     return (
-        <GlowLamp color="194,97,254" colorDark="53,42,79" className={`${styles.paddings} flex flex-col items-center`} id="skills">
+        <div className="flex flex-col justify-center mt-[-2rem] lg:mt-[-12rem]">
+            <GlowLamp color="194,97,254" colorDark="53,42,79" className={`${styles.paddings} flex flex-col items-center`} id="skills">
 
                 {/* <motion.div
                     variants={staggerContainer}
@@ -45,19 +46,19 @@ const Skills = () => {
                     viewport={{ once: false, amount: 0.25 }}
                     className='justify-center'
                 > */}
-                   <div className={`${styles.innerWidth} mx-auto ${styles.flexCenter} flex-col`}>
-          <PageTitle
-            title={
-              <>
-                My Skills
-              </>
-            } />
-   
-          </div>
-                    {/* <TypingText title="| My Skills" textStyles="text-center lg:mt-[30px] mb-[20px]" /> */}
+                <div className={`${styles.innerWidth} mx-auto ${styles.flexCenter} flex-col`}>
+                    <PageTitle
+                        title={
+                            <>
+                                My Skills
+                            </>
+                        } />
+
+                </div>
+                {/* <TypingText title="| My Skills" textStyles="text-center lg:mt-[30px] mb-[20px]" /> */}
                 {/* </motion.div> */}
 
-                <div className="grid grid-cols-3 mini:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-12 gap-3">
+                <div className="grid grid-cols-3 mini:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-12 gap-3 mt-[3rem]">
                     {Array(24).fill().map((_, i) => {
                         const isHiddenIndex = [].includes(i);
                         // const isHiddenIndex = [1, 7, 10,32,24,15,17,19,20,28,29].includes(i);
@@ -145,9 +146,10 @@ const Skills = () => {
                     })}
 
                 </div>
-{/* 
+                {/* 
             </section> */}
-        </GlowLamp>
+            </GlowLamp>
+        </div>
     )
 
 }

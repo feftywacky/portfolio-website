@@ -34,7 +34,7 @@ const Hero = () => {
           "scale3d(0.9, 1.05, 1)",
           "scale3d(1, 1, 1)",
         ],
-        color: "#00FF7F",
+        color: "#2353ff",
         transition: {
           times: [0, 0.2, 0.3, 0.6, 0.8, 1],
           color: { duration: 0.5 },
@@ -129,6 +129,8 @@ const Hero = () => {
                   "Software Developer",
                   1500,
                   "Frontend Developer",
+                  1500,
+                  "Fullstack Developer",
                   1500,
                   "UI/UX Designer",
                   1500,

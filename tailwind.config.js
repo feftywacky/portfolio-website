@@ -28,6 +28,7 @@ module.exports = {
         grey_light: "#A8A8A8",
         "grey-dark": "#222326",
         "primary-text": "#b4bcd0",
+        "button-color": "#7289da",
         hoverColor: '#00FF7F',
       },
 

@@ -25,7 +25,7 @@ const styles = {
   heroHeading:
       'text-white mb-1 text-4xl md:text-6xl lg:text-8xl lg:leading-normal font-extrabold',
 heroSubheading: 
-        'text-hoverColor text-3xl md:text-4xl lg:text-6xl lg:leading-normal font-bold',
+        'text-button-color text-3xl md:text-4xl lg:text-6xl lg:leading-normal font-bold',
   heroDText:
       'md:w-[212px] sm:w-[80px] w-[60px] md:h-[108px] sm:h-[48px] h-[38px] md:border-[18px] border-4 border-[9px] rounded-r-[50px] border-white sm:mx-2 mx-[6px]',
 };
