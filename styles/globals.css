@@ -154,8 +154,8 @@
 .skill_item {
   width: 60%;
   overflow: visible;
-  stroke: #A8A8A8;
-  stroke-width: 10;
+  stroke: #fff;
+  stroke-width: 6;
   stroke-linejoin: round;
   stroke-linecap: round;
 }

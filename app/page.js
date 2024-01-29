@@ -32,7 +32,12 @@ TODO
 - [ ] fill in all text
 - [x] add footer
 - [x] mess with colour combinations/ change colour of buttons to blue
--> svg png 256 x 256 2% border
 
+skills
+https://www.svgrepo.com
+
+for bordered icons:
+svg: export optimized
+png: export 256x256
 */
 
