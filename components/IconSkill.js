@@ -2,10 +2,13 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 
 
-export const SkillIcon = ({ onClick, svgPaths, color, duration, svgViewBox }) => {
+export const SkillIcon = ({ onClick, svgPaths, color, duration, svgViewBox, strokeSize, widthSize }) => {
   const [hoverKey, setHoverKey] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const [hoverColor, setHoverColor] = useState("rgba(255, 255, 255, 1)");
+
+  if (widthSize === undefined)
+    widthSize = "60%";
 
   if (!duration)
     duration = 0.3;
@@ -39,12 +42,14 @@ export const SkillIcon = ({ onClick, svgPaths, color, duration, svgViewBox }) =>
       <motion.svg 
         viewBox={svgViewBox} 
         xmlns="http://www.w3.org/2000/svg" 
-        className="skill_item" 
+        className="skill_item"
+        style={{width: widthSize}}
       >
         {svgPaths.map((svgPath, index) => (
           <motion.path
             key={hoverKey + `path${index + 1}`}
             d={svgPath}
+            stroke-width={strokeSize}
             variants={icon}
             initial={"hidden"}
             animate={"visible"}

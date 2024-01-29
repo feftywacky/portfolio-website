@@ -13,7 +13,7 @@ const Footer = () => (
     <p className="font-normal text-[14px] md:text-[20px] text-gradient opacity-75 text-center">
       Made by yours truly. Designed in Figma. Built using Next.js, Tailwind CSS and Framer. Deployed with Vercel. 
       </p>
-      <p className="font-normal text-[14px] md:text-[16px] text-white opacity-70 mt-[-1rem]">
+      <p className="font-normal text-[10px] md:text-[16px] text-white opacity-70 mt-[-1rem]">
         © 2024 Feiyu Lin. All rights reserved.&nbsp;&hearts;
 
       </p>

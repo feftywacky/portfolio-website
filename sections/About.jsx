@@ -25,7 +25,7 @@ const About = () => (
           } />
 
         <motion.p
-          variants={fadeIn('up', 'tween', 1.5, 1)}
+          variants={fadeIn('up', 'tween', 1, 1)}
           className={`${styles.xPaddings} mt-[2rem] md:mt-[3rem] font-normal md:text-[24px] mini:text-[18px] text-[14px] text-center text-white z-10`}
         >
           Hi! My name is Feiyu Lin and I'm currently study Computer Science at the University of Ottawa.
