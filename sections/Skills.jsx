@@ -10,14 +10,14 @@ import PageTitle from '../components/PageTitle';
 import { skillSquares } from '../constants';
 
 
-const toggleButtonNames = ["All", "Languages", "Frameworks", "Libraries", "Dev Tools", "IDEs"];
+const toggleButtonNames = ["All", "Languages", "Frameworks", "Libraries", "Dev Tools", "Databases"];
 
 
 const Skills = () => {
 
     const [toggleButton, setToggleButton] = useState(Array(6).fill(false));
     const toggleButtonHandler = (index) => {
-        setToggleButton(toggleButton.map((item, i) => i === index ? (item === false ? item = true : item = false) : item))
+        setToggleButton(toggleButton.map((item, i) => i === index ? true : false));
     }
 
     const [isHoverSkill, setIsHoverSkill] = useState(Array(27).fill(false));
@@ -49,15 +49,14 @@ const Skills = () => {
                                 key={index}
                                 whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
                                 variants={slideIn('up', 'easeInOut', 0.27 * index, 0.75)}
-
-                                onClick={() => toggleButtonHandler(index)}>
+                                onClick={() => 
+                                    toggleButtonHandler(index)}>
                                 {item ? (
-                                    <div className='border-effect'>
+                                    <div className='border-effect-2'>
                                         {toggleButtonNames[index]}
                                     </div>
                                 ) : (
-                                    <div className={`px-[0.5rem] md:px-[1rem] text-center rounded-[18px] 
-                                    text-gradient border-2 border-gradient text-[16px] lg:text-[20px]`}>
+                                    <div className='border-effect-1'>
                                         {toggleButtonNames[index]}
                                     </div>
                                 )}
