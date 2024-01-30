@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --clr-1: #6600cc;
+  --clr-2: #9900cc;
+  --clr-3: #9933ff;
+  --clr-4: #cc33ff;
+  --clr-5: #ff66ff;
+  
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -158,4 +167,67 @@
   stroke-width: 1;
   stroke-linejoin: round;
   stroke-linecap: round;
+}
+
+
+/* border glow effect */
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.border-effect {
+  background: #201b36;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-bottom: 0.1rem;
+  text-align: center;
+  border-radius: 18px;
+  color: white;
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  .border-effect {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 20px;
+  }
+}
+
+.border-effect::before,
+.border-effect::after {
+  content: "";
+  position: absolute;
+  border-radius: 36px;
+  inset: -0.1rem;
+  z-index: -1;
+  background: conic-gradient(
+    from var(--gradient-angle),
+    var(--clr-1),
+    var(--clr-2),
+    var(--clr-3),
+    var(--clr-4),
+    var(--clr-5),
+    var(--clr-4),
+    var(--clr-3),
+    var(--clr-2),
+    var(--clr-1)
+  );
+  border-radius: inherit;
+  animation: rotation 20s linear infinite;
+}
+
+.border-effect::after {
+  filter: blur(0.2rem);
+}
+
+@keyframes rotation {
+  0% {
+    --gradient-angle: 0deg;
+  }
+  100% {
+    --gradient-angle: 360deg;
+  }
 }

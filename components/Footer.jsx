@@ -6,8 +6,6 @@ import { footerVariants } from '../utils/motion';
 const Footer = () => (
   <div
     variants={footerVariants}
-    initial="hidden"
-    whileInView="show"
     className={`${styles.yPaddings} ${styles.xPaddings} mx-auto flex flex-col items-center justify-center gap-8`}
   >
     <p className="font-normal text-[14px] md:text-[20px] text-gradient opacity-75 text-center">
