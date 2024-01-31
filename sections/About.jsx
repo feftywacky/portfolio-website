@@ -7,7 +7,7 @@ import GlowLamp from '../components/GlowLamp';
 import PageTitle from '../components/PageTitle';
 
 const About = () => (
-  <div className={`mt-[2rem] lg:mt-[-6rem] xl:mt-[-4rem] xl:mb-[8rem]`} >
+  <div className={`flex flex-col justify-center mt-[-8rem] sm:mt-[-9rem] lg:mt-[-2rem] mb-[8rem]`}>
     <GlowLamp color="0,225,244" colorDark="23,70,81">
       <motion.div
         variants={staggerContainer}
@@ -26,26 +26,18 @@ const About = () => (
 
         <motion.p
           variants={fadeIn('up', 'tween', 1, 1)}
-          className={`${styles.xPaddings} mt-[2rem] md:mt-[3rem] font-normal md:text-[24px] mini:text-[18px] text-[14px] text-center text-white z-10`}
+          className={`${styles.xPaddings} mt-[1rem] sm:mt-[2rem] font-normal md:text-[24px] mini:text-[18px] text-[14px] text-center text-white z-10`}
         >
-          Hi! My name is Feiyu Lin and I'm currently study Computer Science at the University of Ottawa.
+          Hello there! My name is Feiyu Lin, a passionate Computer Science student pursuing my studies at the University of Ottawa.
+          
+          With a strong background in programming and software development, I am dedicated to creating innovative solutions that positively impact society.
+          
+          As an aspiring software developer, I am eager to gain practical experience and contribute towards meaingful projects.
 
+          I'm a passionate coder with an huge appetite for learning and innovation. When I'm not immersed in lines of code, you'll find me 
+          reading, going to the gym, or discovering new music.
 
-          Outside of school I enjoy reading, going to the gym, and discovering new music.
-
-          temp temp temp temptemp temp temp temptemp temp temp temp
-          temp temp temp temp
-          temp temp temp temptemp temp temp temptemp temp temp temptemp temp temp temptemp temp temp temp
-          temp temp temp temptemp temp temp ALSKJDLAKSJD
-          {' '}
-          <span className="font-extrabold text-white">
-            AAAAAA temp temp temp
-          </span>
-          {' '}
-          temp temp temp temp
-          {' '}
-          <span className="font-extrabold text-white">temp temp temp temp</span> temp temp temp temptemp temp temp tempte
-          mp temp temp temptemp temp temp
+          I believe that coding isn't just a career path for me; it's a journey of discovery and growth!
         </motion.p>
       </motion.div>
     </GlowLamp>
