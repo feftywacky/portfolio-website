@@ -1,14 +1,13 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import styles from '../styles';
-import { staggerContainer, squareVariants, slideIn } from '../utils/motion';
+import { staggerContainer, slideIn } from '../utils/motion';
 import { SkillIcon } from '../components/IconSkill';
 import { GlowLamp } from '../components/GlowLamp';
 import PageTitle from '../components/PageTitle';
 import { skillSquares } from '../constants';
-import { skillsFilter } from '../constants';
 
 
 const toggleButtonNames = ["All", "Languages", "Frameworks", "Databases", "Libraries", "Dev Tools"];
@@ -25,9 +24,7 @@ const Skills = () => {
         const isActive = toggleButton[index];
         setToggleButton(toggleButton.map((item, i) => (i === index) ? (!item) : (false)));
         setActiveCategory(isActive ? null : (toggleButtonNames[index] === "All" ? null : toggleButtonNames[index]));
-        if (toggleButtonNames[index] === "All") {
-            setActiveAll(!activeAll);
-        }
+        (toggleButtonNames[index] === "All") ? setActiveAll(!activeAll) : setActiveAll(false);
     }
 
     return (
