@@ -43,13 +43,12 @@ export const SkillIcon = ({ onClick, svgPaths, color, duration, svgViewBox, stro
         viewBox={svgViewBox} 
         xmlns="http://www.w3.org/2000/svg" 
         className="skill_item"
-        style={{width: widthSize}}
+        style={{ '--stroke-size': strokeSize, width: widthSize }}
       >
         {svgPaths.map((svgPath, index) => (
           <motion.path
             key={hoverKey + `path${index + 1}`}
             d={svgPath}
-            stroke-width={strokeSize}
             variants={icon}
             initial={"hidden"}
             animate={"visible"}

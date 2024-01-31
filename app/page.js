@@ -34,7 +34,7 @@ TODO
 - [ ] changing skill icon stroke width
 - [ ] animating skill icon paths
 - [ ] make all stroke widths the same on refresh (dont require hovering to change stroke width directly to css)
-- [ ] ui changes to skills - text sliding up, double text pushing it up, glow around active skills
+- [ ] ui changes to skills - text sliding up, double text pushing it up, glow around active skills, padding for toggle buttons, edit glow around toggle buttons
 - [x] add footer
 - [x] mess with colour combinations/ change colour of buttons to blue
 
