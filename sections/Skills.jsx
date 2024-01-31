@@ -8,25 +8,32 @@ import { SkillIcon } from '../components/IconSkill';
 import { GlowLamp } from '../components/GlowLamp';
 import PageTitle from '../components/PageTitle';
 import { skillSquares } from '../constants';
+import { skillsFilter } from '../constants';
 
 
-const toggleButtonNames = ["All", "Languages", "Frameworks", "Libraries", "Dev Tools", "Databases"];
+const toggleButtonNames = ["All", "Languages", "Frameworks", "Databases", "Libraries", "Dev Tools"];
 
 
 const Skills = () => {
 
     const [toggleButton, setToggleButton] = useState(Array(6).fill(false));
-    const toggleButtonHandler = (index) => {
-        setToggleButton(toggleButton.map((item, i) => i === index ? true : false));
-    }
-
     const [isHoverSkill, setIsHoverSkill] = useState(Array(27).fill(false));
+    const [activeCategory, setActiveCategory] = useState(null);
+    const [activeAll, setActiveAll] = useState(false);
+
+    const toggleButtonHandler = (index) => {
+        const isActive = toggleButton[index];
+        setToggleButton(toggleButton.map((item, i) => (i === index) ? (!item) : (false)));
+        setActiveCategory(isActive ? null : (toggleButtonNames[index] === "All" ? null : toggleButtonNames[index]));
+        if (toggleButtonNames[index] === "All") {
+            setActiveAll(!activeAll);
+        }
+    }
 
     return (
         <div className={` flex flex-col justify-between mt-[-2rem] lg:mt-[-11rem]`}>
             <GlowLamp color="194,97,254" colorDark="53,42,79" >
                 <div className={`${styles.xPaddings} flex flex-col items-center`}>
-
                     <div className={`${styles.innerWidth} mx-auto ${styles.flexCenter} flex-col`}>
                         <PageTitle
                             title={
@@ -50,7 +57,8 @@ const Skills = () => {
                                 whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
                                 variants={slideIn('up', 'easeInOut', 0.27 * index, 0.75)}
                                 onClick={() => 
-                                    toggleButtonHandler(index)}>
+                                    toggleButtonHandler(index)
+                                }>
                                 {item ? (
                                     <div className='border-effect-2'>
                                         {toggleButtonNames[index]}
@@ -70,6 +78,7 @@ const Skills = () => {
                             const isHiddenIndex = [].includes(i);
                             // const isHiddenIndex = [1, 7, 10,32,24,15,17,19,20,28,29].includes(i);
                             const skill = skillSquares[i];
+                            const isHovered = (activeAll) ? true : (isHoverSkill[i] || (activeCategory && skill.category === activeCategory));
                             return (
 
                                 <motion.div
@@ -77,7 +86,11 @@ const Skills = () => {
                                     key={i}
                                     className="w-[78px] h-[78px] lg:w-[96px] lg:h-[96px] flex items-center justify-center rounded-[8px] glass-effect"
                                     whileHover={{ backgroundColor: "#332941", transition: { duration: 0.3 }, border: "none", scale: 1.05 }}
+                                    style={ isHovered ? { backgroundColor: "#332941", transition: { duration: 0.3 }, border: "none", scale: 1.05 } : {}}
                                     onMouseEnter={() => {
+                                        setActiveCategory(null);
+                                        setActiveAll(false);
+                                        setToggleButton(Array(6).fill(false));
                                         setIsHoverSkill(prevState => {
                                             const newState = [...prevState];
                                             newState[i] = true;
@@ -101,8 +114,8 @@ const Skills = () => {
                                                     style={{ width: skill.imgWidth ? skill.imgWidth : '50%', height: skill.imgWidth ? skill.imgWidth : '50%', position: 'absolute' }}
                                                     initial={{ opacity: 0 }}
                                                     animate={{
-                                                        opacity: isHoverSkill[i] ? 1 : 0,
-                                                        y: isHoverSkill[i] ? -7 : 0,
+                                                        opacity: isHovered ? 1 : 0,
+                                                        y: isHovered ? -7 : 0,
                                                         transition: {
                                                             opacity: { duration: 0 },
                                                             y: { duration: 0.3 }
@@ -115,8 +128,8 @@ const Skills = () => {
                                                     style={{ position: 'absolute' }}
                                                     initial={{ opacity: 1 }}
                                                     animate={{
-                                                        opacity: isHoverSkill[i] ? 0 : 1,
-                                                        y: isHoverSkill[i] ? -7 : 0,
+                                                        opacity: isHovered ? 0 : 1,
+                                                        y: isHovered ? -7 : 0,
                                                         transition: {
                                                             opacity: { duration: 0 },
                                                             y: { duration: 0.3 }
@@ -146,7 +159,7 @@ const Skills = () => {
                                                         svgViewBox={skill.svgViewBox}
                                                         strokeSize={skill.strokeSize ? skill.strokeSize : 0.75}
                                                         widthSize={skill.widthSize ? skill.widthSize : "60%"}
-                                                        onHover={isHoverSkill[i]}
+                                                        onHover={isHovered}
                                                         key={i}
                                                     />
                                                 </motion.div>
@@ -154,7 +167,7 @@ const Skills = () => {
                                             </AnimatePresence>
 
 
-                                            {isHoverSkill[i] &&
+                                            {isHovered &&
                                                 <div className="mt-[80%]">
                                                     <p className="text-xs text-center font-semibold text-white">{skill.name}</p>
                                                 </div>

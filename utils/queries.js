@@ -1,5 +1,6 @@
 import { projects } from '../constants/index.js';
-import { redirectToChessEngine, redirectToSpaceship, redirectToKmap, redirectToMedihub, redirectToGenerativeAI } from './ExploreCard.jsx';
+import { redirectToChessEngine, redirectToSpaceship, redirectToKmap, redirectToMedihub, redirectToGenerativeAI } from '../components/ExploreCard.jsx';
+import { skillsFilter } from '../constants/index.js';
 
 export const getImageUrlByTitle = (title) => {
   if (title === 'Space Invaders') {

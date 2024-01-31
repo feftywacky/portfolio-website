@@ -2,7 +2,7 @@
 
 import { motion, AnimatePresence } from 'framer-motion';
 import styles from '../styles';
-import { getImageUrlByTitle, getProjectTextByTitle } from './query.js';
+import { getImageUrlByTitle, getProjectTextByTitle } from '../utils/queries';
 
 
 export const ExploreModal = ({ title }) => {
