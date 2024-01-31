@@ -30,10 +30,9 @@ TODO
 - [x] edit explore popup card
 - [ ] make project card transitions smoother
 - [ ] fill in all text
-- [ ] fix skill toggle bugs (all button not toggling when swapping to another category, colour not resetting when hovering)
-- [ ] changing skill icon stroke width
+- [x] fix skill toggle bugs (all button not toggling when swapping to another category, colour not resetting when hovering)
 - [ ] animating skill icon paths
-- [ ] make all stroke widths the same on refresh (dont require hovering to change stroke width directly to css)
+- [x] make all stroke widths the same on refresh (dont require hovering to change stroke width directly to css)
 - [ ] ui changes to skills - text sliding up, double text pushing it up, glow around active skills, padding for toggle buttons, edit glow around toggle buttons
 - [x] add footer
 - [x] mess with colour combinations/ change colour of buttons to blue

@@ -43,7 +43,7 @@ const Skills = () => {
 
 
                     <motion.div
-                        className='flex flex-wrap justify-center md:flex-row gap-4 md:gap-5'
+                        className='flex flex-wrap justify-center md:flex-row gap-4 md:gap-5 xl:gap-6 mt-0 xl:mt-[1.5rem]'
                         variants={staggerContainer}
                         initial="hidden"
                         whileInView="show"
@@ -61,7 +61,7 @@ const Skills = () => {
                                         {toggleButtonNames[index]}
                                     </div>
                                 ) : (
-                                    <div className='border-effect-1'>
+                                    <div className='border-effect-1 hover:text-light-purple'>
                                         {toggleButtonNames[index]}
                                     </div>
                                 )}
@@ -70,7 +70,7 @@ const Skills = () => {
                         ))}
                     </motion.div>
 
-                    <div className="grid grid-cols-3 mini:grid-cols-4 md:grid-cols-6 lg:grid-cols-9 gap-3 mt-[3rem]">
+                    <div className="grid grid-cols-3 mini:grid-cols-4 md:grid-cols-6 lg:grid-cols-9 gap-3 mt-[2rem]">
                         {Array(27).fill().map((_, i) => {
                             const isHiddenIndex = [].includes(i);
                             // const isHiddenIndex = [1, 7, 10,32,24,15,17,19,20,28,29].includes(i);

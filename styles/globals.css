@@ -195,6 +195,20 @@
   }
 }
 
+@media (min-width: 1920px) {
+  .border-effect-1 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    font-size: 24px;
+  }
+
+  .border-effect-2 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    font-size: 24px;
+  }
+}
+
 @keyframes rotation {
   0% {
     --gradient-angle: 0deg;
@@ -208,11 +222,12 @@
   background: #201b36;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-  padding-bottom: 0.1rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.2rem;
   text-align: center;
   border-radius: 18px;
   color: white;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .border-effect-1::before,
@@ -247,11 +262,12 @@
   background: #201b36;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-  padding-bottom: 0.1rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.2rem;
   text-align: center;
   border-radius: 18px;
-  color: white;
-  font-size: 16px;
+  color: #9ba2f7;
+  font-size: 18px;
 }
 
 .border-effect-2::before,

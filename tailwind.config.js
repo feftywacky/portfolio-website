@@ -30,6 +30,11 @@ module.exports = {
         "primary-text": "#b4bcd0",
         "button-color": "#7289da",
         hoverColor: '#00FF7F',
+        "hot-pink": "#FF69B4",
+        "light-green": "#95E049",
+        'super-light-green': "#DAF7A6",
+        'light-purple': '#9ba2f7',
+        'light-blue': '#6c98f3',
       },
 
       scale: {
