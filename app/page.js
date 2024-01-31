@@ -26,10 +26,14 @@ TODO
 
 - [x] fix weird circle too bright for lamp colour gradient, could be because of background
 - [x] make it mobile reponsive
-- [ ] add skills
+- [x] add skills
 - [x] edit explore popup card
 - [ ] make project card transitions smoother
 - [ ] fill in all text
+- [ ] fix skill toggle bugs (all button not toggling when swapping to another category, colour not resetting when hovering)
+- [ ] changing skill icon stroke width
+- [ ] animating skill icon paths
+- [ ] make all stroke widths the same on refresh (dont require hovering to change stroke width directly to css)
 - [x] add footer
 - [x] mess with colour combinations/ change colour of buttons to blue
 

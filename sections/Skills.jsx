@@ -86,7 +86,7 @@ const Skills = () => {
                                     key={i}
                                     className="w-[78px] h-[78px] lg:w-[96px] lg:h-[96px] flex items-center justify-center rounded-[8px] glass-effect"
                                     whileHover={{ backgroundColor: "#332941", transition: { duration: 0.3 }, border: "none", scale: 1.05 }}
-                                    style={ isHovered ? { backgroundColor: "#332941", transition: { duration: 0.3 }, border: "none", scale: 1.05 } : {}}
+                                    animate={{ backgroundColor: isHovered ? "#332941" : "transparent", border: isHovered ? "none" : "" }}
                                     onMouseEnter={() => {
                                         setActiveCategory(null);
                                         setActiveAll(false);
