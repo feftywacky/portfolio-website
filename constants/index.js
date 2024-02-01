@@ -32,7 +32,7 @@ export const skillSquares = [
 
     {
         category: "Dev Tools",
-        strokeSize: 0.75,
+        
         svgViewBox: "0 0 32 32",
         imgURL: '/skills/android-studio.svg',
         name: "Android Studio",
@@ -44,7 +44,7 @@ export const skillSquares = [
 
     {
         category: "Dev Tools",
-        strokeSize: 0.75,
+        
         svgViewBox: "0 0 32 32",
         imgURL: '/skills/clion.svg',
         name: "Clion",
@@ -62,7 +62,7 @@ export const skillSquares = [
         category: "Languages",
         imgWidth: '60%',
         widthSize: "72%",
-        strokeSize: 0.75,
+        
         svgViewBox: "0 0 32 32",
         imgURL: '/skills/cpp.svg',
         name: "C++",
@@ -77,7 +77,7 @@ export const skillSquares = [
     {
         category: "Languages",
         imgWidth: '55%',
-        strokeSize: 0.75,
+        
         svgViewBox: "0 0 32 32",
         imgURL: '/skills/css.svg',
         name: "CSS",
@@ -88,7 +88,7 @@ export const skillSquares = [
 
     {
         category: "Frameworks",
-        strokeSize: 0.4,
+        strokeSize: 0.1,
         svgViewBox: "0 0 16 16",
         imgURL: '/skills/docker.svg',
         name: "Docker",
@@ -97,7 +97,7 @@ export const skillSquares = [
 
     {
         category: "Dev Tools",
-        strokeSize: 4,
+        strokeSize: 1,
         svgViewBox: "0 -8 256 256",
         imgURL: '/skills/eclipse.svg',
         name: "Eclipse",
@@ -112,7 +112,7 @@ export const skillSquares = [
 
     {
         category: "Dev Tools",
-        strokeSize: 0.75,
+        
         svgViewBox: "0 0 32 32",
         imgURL: '/skills/figma.svg',
         name: "Figma",
@@ -125,7 +125,7 @@ export const skillSquares = [
 
     {
         category: "Databases",
-        strokeSize: 5,
+        strokeSize: 1,
         svgViewBox: "-47.5 0 351 351",
         imgURL: '/skills/firebase.svg',
         name: "Firebase",
@@ -140,7 +140,7 @@ export const skillSquares = [
 
     {
         category: "Libraries",
-        strokeSize: 0.75,
+        
         svgViewBox: "0 0 32 32",
         imgURL: '/skills/framer.svg',
         name: "Framer",
@@ -152,7 +152,8 @@ export const skillSquares = [
 
     {
         category: "Dev Tools",
-        strokeSize: 0.75,
+        imgWidth: '55%',
+        
         svgViewBox: "0 0 32 32",
         imgURL: '/skills/git.svg',
         name: "Git",
@@ -163,7 +164,7 @@ export const skillSquares = [
     {
         category: "Dev Tools",
         widthSize: "80%",
-        strokeSize: 10,
+        strokeSize: 3.5,
         svgViewBox: "0 0 512 512",
         imgURL: '/skills/github.svg',
         name: "GitHub",
@@ -172,7 +173,7 @@ export const skillSquares = [
 
     {
         category: "Languages",
-        strokeSize: 0.75,
+        
         svgViewBox: "0 0 32 32",
         imgURL: '/skills/html.svg',
         name: "HTML",
@@ -183,7 +184,7 @@ export const skillSquares = [
 
     {
         category: "Languages",
-        strokeSize: 0.75,
+        strokeSize: 0.2,
         svgViewBox: "0 0 32 32",
         imgURL: '/skills/java.svg',
         name: "Java",
@@ -199,7 +200,7 @@ export const skillSquares = [
 
     {
         category: "Languages",
-        strokeSize: 6,
+        strokeSize: 2,
         svgViewBox: "0 0 500 500",
         imgURL: '/skills/js-image.svg',
         name: "JavaScipt",
@@ -216,7 +217,7 @@ export const skillSquares = [
     {
         category: "Databases",
         imgWidth: '65%',
-        strokeSize: 0.75,
+        
         svgViewBox: "0 0 32 32",
         imgURL: '/skills/mongodb.svg',
         name: "MongoDB",
@@ -228,7 +229,7 @@ export const skillSquares = [
     {
         category: "Databases",
         widthSize: "55%",
-        strokeSize: 0.5,
+        strokeSize: 0.2,
         svgViewBox: "0 0 24 24",
         imgURL: '/skills/mysql.svg',
         name: "MySQL",
@@ -237,7 +238,7 @@ export const skillSquares = [
 
     {
         category: "Frameworks",
-        strokeSize: 6,
+        strokeSize: 2,
         svgViewBox: "0 0 256 256",
         imgURL: '/skills/next.svg',
         name: "Next.js",
@@ -246,7 +247,6 @@ export const skillSquares = [
 
     {
         category: "Frameworks",
-        strokeSize: 0.75,
         svgViewBox: "0 0 32 32",
         imgURL: '/skills/node.svg',
         name: "Node.js",
@@ -257,7 +257,7 @@ export const skillSquares = [
     {
         category: "Libraries",
         widthSize: "55%",
-        strokeSize: 6,
+        strokeSize: 2,
         svgViewBox: "-9 0 274 274",
         imgURL: '/skills/numpy.svg',
         name: "NumPy",
@@ -268,7 +268,7 @@ export const skillSquares = [
     {
         category: "Databases",
         widthSize: "60%",
-        strokeSize: 5,
+        strokeSize: 1,
         svgViewBox: "-4 0 264 264",
         imgURL: '/skills/postgresql.svg',
         name: "PostgreSQL",
@@ -281,7 +281,7 @@ export const skillSquares = [
 
     {
         category: "Dev Tools",
-        strokeSize: 0.75,
+        
         svgViewBox: "0 0 32 32",
         imgURL: '/skills/pycharm.svg',
         name: "PyCharm",
@@ -299,7 +299,7 @@ export const skillSquares = [
 
     {
         category: "Languages",
-        strokeSize: 0.75,
+        
         svgViewBox: "0 0 32 32",
         imgURL: '/skills/python.svg',
         name: "Python",
@@ -309,7 +309,6 @@ export const skillSquares = [
 
     {
         category: "Frameworks",
-        strokeSize: 0.75,
         svgViewBox: "0 0 32 32",
         imgURL: '/skills/react.svg',
         name: "React",
@@ -319,7 +318,7 @@ export const skillSquares = [
 
     {
         category: "Databases",
-        strokeSize: 0.75,
+        strokeSize: 0.2,
         svgViewBox: "0 0 32 32",
         imgURL: '/skills/sqlite.svg',
         name: "SQLite",
@@ -330,7 +329,7 @@ export const skillSquares = [
 
     {
         category: "Libraries",
-        strokeSize: 6,
+        strokeSize: 2,
         svgViewBox: "0 -51 256 256",
         imgURL: '/skills/tailwindcss.svg',
         name: "Tailwind CSS",
@@ -340,7 +339,7 @@ export const skillSquares = [
     {
         category: "Dev Tools",
         widthSize: "55%",
-        strokeSize: 0.75,
+        
         svgViewBox: "0 0 24 24",
         imgURL: '/skills/vercel.svg',
         name: "Vercel",
@@ -349,7 +348,7 @@ export const skillSquares = [
 
     {
         category: "Dev Tools",
-        strokeSize: 0.75,
+        
         svgViewBox: "0 0 32 32",
         imgURL: '/skills/vscode.svg',
         name: "VS Code",
