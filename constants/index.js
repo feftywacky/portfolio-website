@@ -23,7 +23,7 @@ export const projects = [
     {
         id: 'project-5',
         imgUrl: '/generative_ai.jpg',
-        title: 'Generative AI Fullstack App',
+        title: 'Kamino AI',
     },
 ];
 
