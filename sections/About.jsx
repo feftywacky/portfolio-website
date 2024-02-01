@@ -29,12 +29,17 @@ const About = () => (
           className={`px-[3.5rem] sm:px-[10rem] mt-[1rem] sm:mt-[2rem] font-normal md:text-[24px] mini:text-[18px] text-[14px] text-left text-white z-10`}
         >
           Hello there! My name is Feiyu Lin, a passionate Computer Science student pursuing my studies at the University of Ottawa. 
+          <br />
+          <br />
+          As an aspiring software developer, I am eager to gain practical experience and am dedicated towards developing solutions that positively impact society.
           
-          As an aspiring software developer, I am eager to gain practical experience and dedicated towarards contributing/creating innovative solutions that positively impact society.
-          
-          I'm a passionate coder with a huge appetite for learning and innovation. When I'm not immersed in lines of code, you'll find me 
-          reading, going to the gym, or discovering new music.
-
+          I'm a passionate coder with a huge appetite for learning and innovation.
+          <br />
+          <br />
+          When I'm not immersed in lines of code, you'll find me 
+          reading, going to the gym, or listening music (please put me on new songs!).
+          <br />
+          <br />
           I believe that coding isn't just a career path for me; it's a journey of discovery and growth!
         </motion.p>
       </motion.div>
