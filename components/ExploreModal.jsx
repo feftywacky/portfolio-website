@@ -14,7 +14,7 @@ export const ExploreModal = ({ title }) => {
                         mt-[2rem] lg:mt-0">
             <div className="flex-1 mr-4">
                 <h2 className="text-gradient text-xl lg:text-2xl font-bold mb-4">{title}</h2>
-                <p className="text-white mb-4 text-[10px] mini:text-[14px] md:text-[18px] 2xl:text-[22px]">
+                <p className="text-white mb-4 text-[10px] mini:text-[14px] md:text-[16px]">
                     {getProjectTextByTitle(title)}
                 </p>
             </div>

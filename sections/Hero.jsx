@@ -34,7 +34,7 @@ const Hero = () => {
           "scale3d(0.9, 1.05, 1)",
           "scale3d(1, 1, 1)",
         ],
-        color: "#2353ff",
+        color: "#846CF3",
         transition: {
           times: [0, 0.2, 0.3, 0.6, 0.8, 1],
           color: { duration: 0.5 },
@@ -58,7 +58,7 @@ const Hero = () => {
 
 
   return (
-    <section className={`${styles.xPaddings} flex items-center justify-center h-screen w-screen bg-hero-gradient`}>
+    <section className={`${styles.xPaddings} flex items-center justify-center h-screen w-screen bg-hero-gradient mb-[4rem]`}>
       <motion.div
         variants={staggerContainer}
         initial="hidden"

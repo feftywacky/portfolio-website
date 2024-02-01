@@ -4,7 +4,7 @@ export const GlowLamp = ({ children, color, colorDark }) => {
   const { ref, inView } = useInView({ threshold: 0.4, triggerOnce: false, delay: 500 });
 
   const baseClass = "after:bg-[radial-gradient(ellipse_100%_40%_at_50%_60%,rgba(var(--feature-color),0.1),transparent) relative \
-    flex flex-col items-center mt-[-10rem] lg:mt-0 overflow-x-clip before:pointer-events-none \
+    flex flex-col items-center overflow-x-clip before:pointer-events-none \
     before:absolute before:h-[40rem] before:w-full \
     before:bg-[conic-gradient(from_90deg_at_90%_50%,#000212,rgb(var(--feature-color-dark))),conic-gradient(from_270deg_at_10%_50%,rgb(var(--feature-color-dark)),#000212)] \
     before:bg-no-repeat before:transition-[transform,opacity] before:duration-1000 before:ease-in before:[mask:radial-gradient(100%_50%_at_center_center,_black,_transparent)] \

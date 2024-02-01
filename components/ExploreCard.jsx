@@ -23,7 +23,7 @@ export const redirectToMedihub = () => {
 }
 
 export const redirectToGenerativeAI = () => {
-  window.open('https://github.com/feftywacky', '_blank');
+  window.open('https://github.com/feftywacky/KaminoAI', '_blank');
 }
 
 const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => {
@@ -83,7 +83,7 @@ const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => {
                     else if (title === "Healthcare Management App") {
                       redirectToMedihub();
                     }
-                    else if (title === "Generative AI Fullstack App") {
+                    else if (title === "Kamino AI") {
                       redirectToGenerativeAI();
                     }
                   }}

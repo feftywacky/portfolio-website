@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  scroll-behavior: smooth;
+}
+
 :root {
   --clr-1: #201b36;
   --clr-2: #302A4C;
@@ -244,7 +248,6 @@
     var(--clr-3),
     var(--clr-4),
     var(--clr-5),
-    var(--clr-5),
     var(--clr-4),
     var(--clr-3),
     var(--clr-2),
@@ -284,7 +287,6 @@
     var(--clr-8),
     var(--clr-9),
     var(--clr-10),
-    var(--clr-10),
     var(--clr-9),
     var(--clr-8),
     var(--clr-7),
@@ -296,4 +298,9 @@
 
 .border-effect-2::after {
   filter: blur(0.4rem);
+}
+
+.modal-href:hover {
+  color: #9ba2f7;
+  cursor: pointer;
 }

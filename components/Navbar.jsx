@@ -22,10 +22,21 @@ const redirectToResume = () => {
 };
 
 const TextButton = ({ href, buttonText }) => (
-  <a href={href} className="text-l md:text-xl bg-transparent border-none cursor-pointer text-white hover:scale-120 hover:text-button-color transition-colors duration-200 z-10 font-semibold">
+  <a href={href} className="text-l md:text-xl bg-transparent border-none cursor-pointer text-gradient hover:scale-120 hover:text-button-color transition-colors duration-200 z-10 font-semibold">
     {buttonText}
   </a>
 );
+
+function handleClick(event, href, offset) {
+  event.preventDefault();
+  const element = document.querySelector(href);
+  const position = element.getBoundingClientRect().top - offset;
+  window.scrollTo({
+    top: position,
+    behavior: "smooth"
+  });
+}
+
 
 
 export const NavButton = ({ onClick, svgPath1, svgPath2, svgPath3, svgPath4, svgPath5, svgPath6, svgPath7, svgPath8, color, duration }) => {

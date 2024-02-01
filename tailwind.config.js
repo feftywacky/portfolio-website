@@ -10,6 +10,13 @@ module.exports = {
   theme: {
     extend: {
 
+      gridTemplateColumns: {
+        'auto-fill': 'repeat(auto-fill, minmax(100px, 1fr))',
+      },
+      justifyContent: {
+        'grid-center': 'center',
+      },
+
       backdropFilter: {
         'none': 'none',
         'blur': 'blur(20px)',

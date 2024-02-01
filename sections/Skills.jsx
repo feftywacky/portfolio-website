@@ -9,7 +9,6 @@ import { GlowLamp } from '../components/GlowLamp';
 import PageTitle from '../components/PageTitle';
 import { skillSquares } from '../constants';
 
-
 const toggleButtonNames = ["All", "Languages", "Frameworks", "Databases", "Libraries", "Dev Tools"];
 
 
@@ -28,9 +27,10 @@ const Skills = () => {
     }
 
     return (
-        <div className={` flex flex-col justify-between mt-[-2rem] lg:mt-[-11rem]`}>
+        <div className={`flex flex-col justify-center mt-[-11rem]`} >
+            <div className="">
             <GlowLamp color="194,97,254" colorDark="53,42,79" >
-                <div className={`${styles.xPaddings} flex flex-col items-center`}>
+                <div className={`${styles.xPaddings} flex flex-col items-center mb-[-7rem]`} >
                     <div className={`${styles.innerWidth} mx-auto ${styles.flexCenter} flex-col`}>
                         <PageTitle
                             title={
@@ -154,7 +154,7 @@ const Skills = () => {
                                                             skill.svgPath14,
                                                         ]}
                                                         svgViewBox={skill.svgViewBox}
-                                                        strokeSize={skill.strokeSize ? skill.strokeSize : 0.75}
+                                                        strokeSize={skill.strokeSize ? skill.strokeSize : 0.2}
                                                         widthSize={skill.widthSize ? skill.widthSize : "60%"}
                                                         onHover={isHovered}
                                                         key={i}
@@ -165,9 +165,11 @@ const Skills = () => {
 
 
                                             {isHovered &&
-                                                <div className="mt-[80%]">
-                                                    <p className="text-xs text-center font-semibold text-white">{skill.name}</p>
-                                                </div>
+                                                <motion.div className="mt-[80%]">
+                                                    <motion.p className="text-[10px] sm:text-[12px] text-center leading-none font-semibold text-white">
+                                                        {skill.name}
+                                                    </motion.p>
+                                                </motion.div>
                                             }
                                         </div>
                                     )}
@@ -178,7 +180,9 @@ const Skills = () => {
                     </div>
                 </div>
 
-            </GlowLamp>
+            </GlowLamp>  
+            </div>
+                     
         </div>
     )
 

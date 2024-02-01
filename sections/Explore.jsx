@@ -15,7 +15,7 @@ const Explore = () => {
 
   return (
 
-    <div className="flex flex-col justify-center mt-[-3rem] mini:mt-[-1rem] lg:mt-[-12rem] ">
+    <div className="flex flex-col justify-center mt-[-10rem] mb-[24rem]">
       <GlowLamp color="40,87,255" colorDark="48,58,117">
 
         <motion.div
@@ -25,7 +25,7 @@ const Explore = () => {
           viewport={{ once: false, amount: 0.25 }}
           className={`${styles.innerWidth} mx-auto flex flex-col`}
         >
-          <div className={`${styles.innerWidth} mx-auto ${styles.flexCenter} mb-[-1rem] lg:mb-[0rem] flex-col`}>
+          <div className={`${styles.innerWidth} mx-auto ${styles.flexCenter} mb-[-1rem] lg:mb-[0rem] flex-col`} >
             <PageTitle
               title={
                 <>
