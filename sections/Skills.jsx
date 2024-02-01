@@ -9,7 +9,7 @@ import { GlowLamp } from '../components/GlowLamp';
 import PageTitle from '../components/PageTitle';
 import { skillSquares } from '../constants';
 
-const toggleButtonNames = ["All", "Languages", "Frameworks", "Databases", "Libraries", "Dev Tools"];
+const toggleButtonNames = ['All', 'Languages', 'Frameworks', 'Databases', 'Libraries', 'Dev Tools'];
 
 
 const Skills = () => {
@@ -22,14 +22,14 @@ const Skills = () => {
     const toggleButtonHandler = (index) => {
         const isActive = toggleButton[index];
         setToggleButton(toggleButton.map((item, i) => (i === index) ? (!item) : (false)));
-        setActiveCategory(isActive ? null : (toggleButtonNames[index] === "All" ? null : toggleButtonNames[index]));
-        (toggleButtonNames[index] === "All") ? setActiveAll(!activeAll) : setActiveAll(false);
+        setActiveCategory(isActive ? null : (toggleButtonNames[index] === 'All' ? null : toggleButtonNames[index]));
+        (toggleButtonNames[index] === 'All') ? setActiveAll(!activeAll) : setActiveAll(false);
     }
 
     return (
         <div className={`flex flex-col justify-center mt-[-11rem]`} >
-            <div className="">
-            <GlowLamp color="194,97,254" colorDark="53,42,79" >
+            <div className=''>
+            <GlowLamp color='194,97,254' colorDark='53,42,79' >
                 <div className={`${styles.xPaddings} flex flex-col items-center mb-[-7rem]`} >
                     <div className={`${styles.innerWidth} mx-auto ${styles.flexCenter} flex-col`}>
                         <PageTitle
@@ -45,8 +45,8 @@ const Skills = () => {
                     <motion.div
                         className='flex flex-wrap justify-center md:flex-row gap-4 md:gap-5 xl:gap-6 mt-0 xl:mt-[1.5rem]'
                         variants={staggerContainer}
-                        initial="hidden"
-                        whileInView="show"
+                        initial='hidden'
+                        whileInView='show'
                         viewport={{ once: false, amount: 0.25 }}>
                         {toggleButton.map((item, index) => (
                             <motion.button
@@ -70,7 +70,7 @@ const Skills = () => {
                         ))}
                     </motion.div>
 
-                    <div className="grid grid-cols-3 mini:grid-cols-4 md:grid-cols-6 lg:grid-cols-9 gap-3 mt-[2rem]">
+                    <div className='grid grid-cols-3 mini:grid-cols-4 md:grid-cols-6 lg:grid-cols-9 gap-3 mt-[2rem]'>
                         {Array(27).fill().map((_, i) => {
                             const isHiddenIndex = [].includes(i);
                             // const isHiddenIndex = [1, 7, 10,32,24,15,17,19,20,28,29].includes(i);
@@ -81,9 +81,9 @@ const Skills = () => {
                                 <motion.div
 
                                     key={i}
-                                    className="w-[78px] h-[78px] lg:w-[96px] lg:h-[96px] flex items-center justify-center rounded-[8px] glass-effect"
-                                    whileHover={{ backgroundColor: "#332941", transition: { duration: 0.3 }, border: "none", scale: 1.05 }}
-                                    animate={{ backgroundColor: isHovered ? "#332941" : "transparent", border: isHovered ? "none" : "" }}
+                                    className='w-[78px] h-[78px] lg:w-[96px] lg:h-[96px] flex items-center justify-center rounded-[8px] glass-effect'
+                                    whileHover={{ backgroundColor: '#332941', transition: { duration: 0.3 }, border: 'none', scale: 1.05 }}
+                                    animate={{ backgroundColor: isHovered ? '#332941' : 'transparent', border: isHovered ? 'none' : '' }}
                                     onMouseEnter={() => {
                                         setActiveCategory(null);
                                         setActiveAll(false);
@@ -103,7 +103,7 @@ const Skills = () => {
                                     }}
                                 >
                                     {skill && (
-                                        <div className="w-3/4 h-3/4 relative flex flex-col items-center justify-center">
+                                        <div className='w-3/4 h-3/4 relative flex flex-col items-center justify-center'>
                                             <AnimatePresence>
                                                 <motion.img
                                                     key={i}
@@ -155,7 +155,7 @@ const Skills = () => {
                                                         ]}
                                                         svgViewBox={skill.svgViewBox}
                                                         strokeSize={skill.strokeSize ? skill.strokeSize : 0.2}
-                                                        widthSize={skill.widthSize ? skill.widthSize : "60%"}
+                                                        widthSize={skill.widthSize ? skill.widthSize : '60%'}
                                                         onHover={isHovered}
                                                         key={i}
                                                     />
@@ -165,8 +165,8 @@ const Skills = () => {
 
 
                                             {isHovered &&
-                                                <motion.div className="mt-[80%]">
-                                                    <motion.p className="text-[10px] sm:text-[12px] text-center leading-none font-semibold text-white">
+                                                <motion.div className='mt-[80%]'>
+                                                    <motion.p className='text-[10px] sm:text-[12px] text-center leading-none font-semibold text-white'>
                                                         {skill.name}
                                                     </motion.p>
                                                 </motion.div>

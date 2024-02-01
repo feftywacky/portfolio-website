@@ -8,11 +8,11 @@ import PageTitle from '../components/PageTitle';
 
 const About = () => (
   <div className={`flex flex-col justify-center mt-[-6rem]`} >
-    <GlowLamp color="0,225,244" colorDark="23,70,81">
+    <GlowLamp color='0,225,244' colorDark='23,70,81'>
       <motion.div
         variants={staggerContainer}
-        initial="hidden"
-        whileInView="show"
+        initial='hidden'
+        whileInView='show'
         viewport={{ once: false, amount: 0.25 }}
         className={`${styles.innerWidth} mx-auto ${styles.flexCenter} flex-col`}
       >

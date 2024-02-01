@@ -1,37 +1,18 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import styles from '../styles';
 import { fadeIn } from '../utils/motion';
-import { useState, useEffect } from 'react';
 import { ExploreModal } from './ExploreModal.jsx';
-
-export const redirectToSpaceship = () => {
-  window.open('https://github.com/feftywacky/spaceship-shoot-game', '_blank');
-}
-
-export const redirectToChessEngine = () => {
-  window.open('https://github.com/feftywacky/Thrawn', '_blank');
-}
-
-export const redirectToKmap = () => {
-  window.open('https://github.com/michaelhum28/kmap-solver', '_blank');
-}
-
-export const redirectToMedihub = () => {
-  window.open('https://github.com/uOttawaSEGA2023/Medihub', '_blank');
-}
-
-export const redirectToGenerativeAI = () => {
-  window.open('https://github.com/feftywacky/KaminoAI', '_blank');
-}
+import { redirectToSpaceship, redirectToChessEngine, redirectToKmap, redirectToMedihub, redirectToGenerativeAI } from '../utils/redirect.js';
 
 const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
-  }
+  };
 
   useEffect(() => {
     if (isModalOpen) {
@@ -45,7 +26,9 @@ const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => {
     <>
       <motion.div
         variants={fadeIn('up', 'easeInOut', index * 0.5, 0.75)}
-        className={`relative ${active === id ? 'lg:flex-[3.5] flex-[10]' : 'lg:flex-[0.5] flex-[2]'} 
+        className={`relative ${
+          active === id ? 'lg:flex-[3.5] flex-[10]' : 'lg:flex-[0.5] flex-[2]'
+        } 
           flex items-center justify-center min-w-[170px] h-[390px] 2xl:h-[430px] 
           transition-[flex] duration-[0.7s] ease-out-flex cursor-pointer overflow-hidden`}
         whileHover={() => handleClick(id)}
@@ -57,13 +40,12 @@ const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => {
           className="absolute w-full h-full object-cover rounded-[24px]"
         />
         {active !== id ? (
-          <h3
-            className="font-semibold text-[18px] sm:text-[20px] md:text-[26px] text-white absolute z-0 lg:bottom-20 lg:rotate-[-90deg] lg:origin-[0,0]">
+          <h3 className="font-semibold text-[18px] sm:text-[20px] md:text-[26px] text-white absolute z-0 lg:bottom-20 lg:rotate-[-90deg] lg:origin-[0,0]">
             {title}
           </h3>
         ) : (
-          <div className={`absolute bottom-0 p-4 sm:p-8 flex justify-start w-full flex-col bg-[rgba(0,0,0,0.5)] rounded-b-[24px]`}>
-            <div className={`flex flex-row space-x-3`}>
+          <div className="absolute bottom-0 p-4 sm:p-8 flex justify-start w-full flex-col bg-[rgba(0,0,0,0.5)] rounded-b-[24px]">
+            <div className="flex flex-row space-x-3">
               <div
                 className={`${styles.flexCenter} w-[50px] h-[50px] md:w-[60px] md:h-[60px] rounded-[18px] md:rounded-[24px] glass-effect hover:scale-110`}
               >
@@ -72,24 +54,20 @@ const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => {
                   alt="github"
                   className="w-full h-full object-contain hover:scale-110"
                   onClick={() => {
-                    if (title === "Space Invaders") {
+                    if (title === 'Space Invaders') {
                       redirectToSpaceship();
-                    } else if (title === "Chess Engine") {
+                    } else if (title === 'Chess Engine') {
                       redirectToChessEngine();
-                    }
-                    else if (title === "Karnaugh Map Solver") {
+                    } else if (title === 'Karnaugh Map Solver') {
                       redirectToKmap();
-                    }
-                    else if (title === "Healthcare Management App") {
+                    } else if (title === 'Healthcare Management App') {
                       redirectToMedihub();
-                    }
-                    else if (title === "Kamino AI") {
+                    } else if (title === 'Kamino AI') {
                       redirectToGenerativeAI();
                     }
                   }}
                   style={{ transform: 'scale(1.1)' }}
                 />
-
               </div>
 
               <div
@@ -113,23 +91,27 @@ const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => {
       </motion.div>
 
       <AnimatePresence>
-        {isModalOpen && (<motion.div
-          initial={{ opacity: 0, scale: 0.8, }}
-          animate={{ opacity: 1, scale: 1, }}
-          exit={{ opacity: 0, scale: 0.8, }}
-          transition={{
-            type: "spring",
-            damping: 20,
-            stiffness: 100,
-            opacity: { duration: 0.3, ease: "easeInOut" },
-            scale: { duration: 0.3, ease: "easeInOut" },
-          }}
-          className={`fixed top-0 left-0 w-full h-full flex items-center justify-center z-50`}
-          onClick={toggleModal}
-          style={{ backdropFilter: 'blur(10px)', backgroundColor: 'rgba(0,0,0,0.7)' }}
-        >
-          {isModalOpen && <ExploreModal title={title} />}
-        </motion.div>
+        {isModalOpen && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.8 }}
+            transition={{
+              type: 'spring',
+              damping: 20,
+              stiffness: 100,
+              opacity: { duration: 0.3, ease: 'easeInOut' },
+              scale: { duration: 0.3, ease: 'easeInOut' },
+            }}
+            className="fixed top-0 left-0 w-full h-full flex items-center justify-center z-50"
+            onClick={toggleModal}
+            style={{
+              backdropFilter: 'blur(10px)',
+              backgroundColor: 'rgba(0,0,0,0.7)',
+            }}
+          >
+            {isModalOpen && <ExploreModal title={title} />}
+          </motion.div>
         )}
       </AnimatePresence>
     </>
@@ -137,4 +119,3 @@ const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => {
 };
 
 export default ExploreCard;
-

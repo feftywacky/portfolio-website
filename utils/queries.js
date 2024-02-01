@@ -1,6 +1,5 @@
 import { projects } from '../constants/index.js';
-import { redirectToChessEngine, redirectToSpaceship, redirectToKmap, redirectToMedihub, redirectToGenerativeAI } from '../components/ExploreCard.jsx';
-import { skillsFilter } from '../constants/index.js';
+import { redirectToSpaceship, redirectToChessEngine, redirectToKmap, redirectToMedihub, redirectToGenerativeAI } from './redirect.js';
 
 export const getImageUrlByTitle = (title) => {
   if (title === 'Space Invaders') {
@@ -25,7 +24,7 @@ export const getProjectTextByTitle = (title) => {
           Embracing a charming pixel art style, the game offers a delightful visual experience enhanced by an array of power-ups and diverse enemy types.
           <br />
           <br />
-          <span onClick={() => redirectToSpaceship()} className="modal-href">
+          <span onClick={() => redirectToSpaceship()} className='modal-href'>
             [VIEW SOURCE CODE]
           </span>
         </p>
@@ -45,7 +44,7 @@ export const getProjectTextByTitle = (title) => {
           while v2.0 uses a neural network. <br /><br />
           Thrawn v1.1 has a rating of 1909 ELO <br />
           Thrawn v2.0 has a rating of ~2900 ELO <br /><br />
-          <span onClick={() => redirectToChessEngine()} className="modal-href">
+          <span onClick={() => redirectToChessEngine()} className='modal-href'>
             [VIEW SOURCE CODE]
           </span>
         </p>
@@ -70,7 +69,7 @@ export const getProjectTextByTitle = (title) => {
             <li>- Admins can approve/deny registration requests</li>
           </ul>
           <br />
-          <span onClick={() => redirectToMedihub()} className="modal-href">
+          <span onClick={() => redirectToMedihub()} className='modal-href'>
             [VIEW SOURCE CODE]
           </span>
         </p>
@@ -95,7 +94,7 @@ export const getProjectTextByTitle = (title) => {
           Featuring a user-friendly interface and interactive controls, it ensures accessibility to users of all levels.
           <br />
           <br />
-          <span onClick={() => redirectToKmap()} className="modal-href">
+          <span onClick={() => redirectToKmap()} className='modal-href'>
             [VIEW SOURCE CODE]
           </span>
         </p>
@@ -118,7 +117,7 @@ export const getProjectTextByTitle = (title) => {
           Whether you're a seasoned artist or an aspiring creator, this platform offers a dynamic space to explore, share, and collaborate on imaginative projects.
           <br />
           <br />
-          <span onClick={() => redirectToGenerativeAI()} className="modal-href">
+          <span onClick={() => redirectToGenerativeAI()} className='modal-href'>
             [VIEW SOURCE CODE]
           </span>
         </p>
