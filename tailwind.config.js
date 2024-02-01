@@ -42,6 +42,8 @@ module.exports = {
         'super-light-green': "#DAF7A6",
         'light-purple': '#9ba2f7',
         'light-blue': '#6c98f3',
+        'dark-purple': '#0a0a1d',
+        'dark-purple-02': "#141229",
       },
 
       scale: {

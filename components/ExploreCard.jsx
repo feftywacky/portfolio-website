@@ -56,7 +56,7 @@ const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => {
                   onClick={() => {
                     if (title === 'Space Invaders') {
                       redirectToSpaceship();
-                    } else if (title === 'Chess Engine') {
+                    } else if (title === 'Thrawn Chess Engine') {
                       redirectToChessEngine();
                     } else if (title === 'Karnaugh Map Solver') {
                       redirectToKmap();

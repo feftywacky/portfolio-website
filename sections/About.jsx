@@ -7,7 +7,7 @@ import GlowLamp from '../components/GlowLamp';
 import PageTitle from '../components/PageTitle';
 
 const About = () => (
-  <div className={`flex flex-col justify-center mt-[-6rem]`} >
+  <div className={`flex flex-col justify-center mt-[-10rem] sm:mt-[-6rem]`} >
     <GlowLamp color='0,225,244' colorDark='23,70,81'>
       <motion.div
         variants={staggerContainer}

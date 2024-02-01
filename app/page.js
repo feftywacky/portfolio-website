@@ -7,10 +7,10 @@ const Page = () => {
     <>
       <div className="bg-background overflow-hidden">
         <Navbar />
-        <div id="home" className="bg-page-gradient"><Hero /></div>
-        <div id="about" className="flex flex-col"><About /></div>
-        <div id = "explore" className="h-screen border-2 border-transparent"><Explore /></div>
-        <div id="skills" className="h-screen border-2 border-transparent"><Skills /></div>
+        <div id="home" className="bg-page-gradient h-screen"><Hero /></div>
+        <div id="about" className="flex flex-col h-screen overflow-hidden"><About /></div>
+        <div id = "explore" className="relative flex flex-col overflow-hidden h-screen"><Explore /></div>
+        <div id="skills" className="relative flex flex-col overflow-hidden"><Skills /></div>
         <Footer />
       </div>
     </>

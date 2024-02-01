@@ -1,7 +1,8 @@
+# Portfolio Website
 You can visit my website [here](https://www.feiyulin.com/)
 
 ## Getting Started
-### running website locally
+### Running Website Locally
 install dependencies:
 ```bash
 npm install
@@ -16,7 +17,8 @@ npm run dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## TODO
-- [ ] fix spacing between sections and pseudo elements leaking outside parent div
+- [ ] add some more content to about section
+- [x] fix spacing between sections and pseudo elements leaking outside parent div
 - [x] fix weird circle too bright for lamp colour gradient, could be because of background
 - [x] make it mobile reponsive
 - [x] add skills

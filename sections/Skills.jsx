@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import styles from '../styles';
 import { staggerContainer, slideIn } from '../utils/motion';
@@ -27,10 +27,9 @@ const Skills = () => {
     }
 
     return (
-        <div className={`flex flex-col justify-center mt-[-11rem]`} >
-            <div className=''>
+        <div className={`flex flex-col justify-center mt-[-12rem] sm:mt-[-8rem]`} >
             <GlowLamp color='194,97,254' colorDark='53,42,79' >
-                <div className={`${styles.xPaddings} flex flex-col items-center mb-[-7rem]`} >
+                <div className={`${styles.xPaddings} flex flex-col items-center`} >
                     <div className={`${styles.innerWidth} mx-auto ${styles.flexCenter} flex-col`}>
                         <PageTitle
                             title={
@@ -181,7 +180,6 @@ const Skills = () => {
                 </div>
 
             </GlowLamp>  
-            </div>
                      
         </div>
     )

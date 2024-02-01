@@ -58,7 +58,7 @@ const Hero = () => {
 
 
   return (
-    <section className={`${styles.xPaddings} flex items-center justify-center h-screen w-screen bg-hero-gradient mb-[4rem]`}>
+    <section className={`${styles.xPaddings} flex items-center justify-center h-screen w-screen bg-hero-gradient`}>
       <motion.div
         variants={staggerContainer}
         initial="hidden"
@@ -152,7 +152,7 @@ const Hero = () => {
             <img
               src="/pfp.jpg"
               alt="hero_pfp"
-              className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              className="absolute transform -translate-x-1/2 -translate-y-1/2 top-[9.5rem] sm:top-[18rem] left-1/2"
             />
           </motion.div>
                 
