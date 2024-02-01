@@ -17,6 +17,8 @@ npm run dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## TODO
+- [ ] auto-toggle between toggle buttons when no user input
+- [ ] animate skill icons (path and render-in animation)
 - [ ] add some more content to about section
 - [x] fix spacing between sections and pseudo elements leaking outside parent div
 - [x] fix weird circle too bright for lamp colour gradient, could be because of background
