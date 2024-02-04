@@ -20,7 +20,6 @@ const Page = () => {
 export default Page;
 
 
-
 /*
 svg skill icons
 
