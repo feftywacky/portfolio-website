@@ -1,4 +1,5 @@
-import { Analytics } from '@vercel/analytics/dist/react';
+// eslint-disable-next-line import/no-unresolved
+import { Analytics } from "@vercel/analytics/react";
 import '../styles/globals.css';
 
 const RootLayout = ({ children }) => (
