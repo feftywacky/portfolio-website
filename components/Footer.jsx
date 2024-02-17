@@ -1,5 +1,3 @@
-'use client';
-
 import styles from '../styles';
 
 const Footer = () => (
@@ -11,7 +9,7 @@ const Footer = () => (
       and Framer. Deployed with Vercel.
     </p>
     <p className="font-normal text-[12px] md:text-[16px] text-light-blue opacity-70 mt-[-1.5rem]">
-      © 2024 Feiyu Lin. All rights reserved.&nbsp;&hearts;
+      © 2024 Feiyu Lin. All rights reserved.
     </p>
   </div>
 );

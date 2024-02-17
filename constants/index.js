@@ -23,7 +23,7 @@ export const projects = [
     {
         id: 'project-5',
         imgUrl: '/generative_ai.jpg',
-        title: 'Kamino AI',
+        title: 'Kamino Productivity App',
     },
 ];
 
@@ -87,7 +87,7 @@ export const skillSquares = [
     },
 
     {
-        category: 'Frameworks',
+        category: 'Dev Tools',
         strokeSize: 0.1,
         svgViewBox: '0 0 16 16',
         imgURL: '/skills/docker.svg',

@@ -1,5 +1,5 @@
 import { projects } from '../constants/index.js';
-import { redirectToSpaceship, redirectToChessEngine, redirectToKmap, redirectToMedihub, redirectToGenerativeAI } from './redirect.js';
+import { redirectToSpaceship, redirectToChessEngine, redirectToKmap, redirectToMedihub, redirectToKamino } from './redirect.js';
 
 export const getImageUrlByTitle = (title) => {
   if (title === 'Space Invaders') {
@@ -102,22 +102,22 @@ export const getProjectTextByTitle = (title) => {
       </div>
     );
   }
-  if (title === 'Kamino AI') {
+  if (title === 'Kamino Productivity App') {
     return (
       <div>
-        <p>
-          Welcome to KaminoAI, where creativity meets aritifical intelligence!
+        <p>  
+          Introducing Kamino, your ultimate productivity web app!
           <br />
           <br />
-          KaminoAI revolutionizes image generation by harnessing the power of advanced AI models.
-          Users can seamlessly create captivating images inspired by DALL-E and Midjourney, fostering a unique blend of innovation and artistic expression.
+          Kamino redefines productivity by drawing inspiration from Notion, offering users a versatile platform to organize their ideas and streamline their projects with ease. 
+          Designed With a clean and intuitive interface, Kamino empowers individuals to manage tasks, take notes, and track progress, all in realtime.
           <br />
           <br />
-          Designed with a sleek interface optimized, individuals can curate their image generation experiences, track their creations, and engage with a vibrant community of like-minded enthusiasts.
-          Whether you're a seasoned artist or an aspiring creator, this platform offers a dynamic space to explore, share, and collaborate on imaginative projects.
+          Whether you're a student, professional, or entrepreneur, Kamino offers a dynamic space to consolidate ideas, work on goals, and execute imaginative projects. 
+          With Kamino, productivity becomes more than just a task – it's a seamless journey towards achieving your objectives.
           <br />
           <br />
-          <span onClick={() => redirectToGenerativeAI()} className='modal-href'>
+          <span onClick={() => redirectToKamino()} className='modal-href'>
             [VIEW SOURCE CODE]
           </span>
         </p>

@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import styles from '../styles';
 import { fadeIn } from '../utils/motion';
 import { ExploreModal } from './ExploreModal.jsx';
-import { redirectToSpaceship, redirectToChessEngine, redirectToKmap, redirectToMedihub, redirectToGenerativeAI } from '../utils/redirect.js';
+import { redirectToSpaceship, redirectToChessEngine, redirectToKmap, redirectToMedihub, redirectToKamino } from '../utils/redirect.js';
 
 const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -62,8 +62,8 @@ const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => {
                       redirectToKmap();
                     } else if (title === 'Healthcare Management App') {
                       redirectToMedihub();
-                    } else if (title === 'Kamino AI') {
-                      redirectToGenerativeAI();
+                    } else if (title === 'Kamino Productivity App') {
+                      redirectToKamino();
                     }
                   }}
                   style={{ transform: 'scale(1.1)' }}

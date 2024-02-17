@@ -5,24 +5,24 @@ import Skills from "../sections/Skills";
 const Page = () => (
   <div className="bg-background overflow-hidden">
     <Navbar />
-    <div id="home" className="bg-page-gradient h-screen overflow-visible">
+    <div id="home" className="bg-page-gradient h-full overflow-visible">
       <Hero />
     </div>
     <div
       id="about"
-      className="flex flex-col h-auto lg:h-screen overflow-visible"
+      className="flex flex-col h-auto lg:h-full overflow-visible"
     >
       <About />
     </div>
     <div
       id="explore"
-      className="flex flex-col h-auto lg:h-screen overflow-visible"
+      className="flex flex-col h-auto lg:h-full overflow-visible"
     >
       <Explore />
     </div>
     <div
       id="skills"
-      className="flex flex-col h-auto lg:h-screen overflow-hidden sm:overflow-visible"
+      className="flex flex-col h-auto lg:h-full overflow-hidden sm:overflow-visible"
     >
       <Skills />
     </div>

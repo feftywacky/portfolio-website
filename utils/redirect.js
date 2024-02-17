@@ -14,6 +14,6 @@ export const redirectToSpaceship = () => {
     window.open('https://github.com/uOttawaSEGA2023/Medihub', '_blank');
   };
   
-  export const redirectToGenerativeAI = () => {
-    window.open('https://github.com/feftywacky/KaminoAI', '_blank');
+  export const redirectToKamino = () => {
+    window.open('https://github.com/feftywacky/Kamino', '_blank');
   };

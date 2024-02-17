@@ -42,7 +42,7 @@ const Skills = () => {
   };
 
   return (
-    <div className={`flex flex-col justify-center mt-[-12rem] sm:mt-[-8rem]`}>
+    <div className={`flex flex-col justify-center mt-[-12rem] sm:mt-[-9rem]`}>
       <GlowLamp color="194,97,254" colorDark="53,42,79">
         <div className={`${styles.xPaddings} flex flex-col items-center`}>
           <div
@@ -61,7 +61,7 @@ const Skills = () => {
             {toggleButton.map((item, index) => (
               <motion.button
                 key={index}
-                whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
+                whileHover={{ scale: 1.1, transition: { duration: 0.3, delay: 0.1 } }}
                 variants={slideIn("up", "easeInOut", 0.27 * index, 0.75)}
                 onClick={() => toggleButtonHandler(index)}
               >
@@ -78,7 +78,7 @@ const Skills = () => {
             ))}
           </motion.div>
 
-          <div className="grid grid-cols-3 mini:grid-cols-4 md:grid-cols-6 lg:grid-cols-9 gap-3 mt-[2rem]">
+          <div className="grid grid-cols-3 mini:grid-cols-4 md:grid-cols-6 lg:grid-cols-9 gap-3 mt-[0.5rem]">
             {Array(27)
               .fill()
               .map((_, i) => {
@@ -95,7 +95,7 @@ const Skills = () => {
                     className="w-[78px] h-[78px] lg:w-[96px] lg:h-[96px] flex items-center justify-center rounded-[8px] glass-effect"
                     whileHover={{
                       backgroundColor: "#332941",
-                      transition: { duration: 0.3 },
+                      transition: { duration: 0.3, delay: 0.1},
                       border: "none",
                       scale: 1.05,
                     }}
@@ -137,8 +137,9 @@ const Skills = () => {
                               opacity: isHovered ? 1 : 0,
                               y: isHovered ? -7 : 0,
                               transition: {
-                                opacity: { duration: 0 },
-                                y: { duration: 0.3 },
+                                opacity: { duration: 0},
+                                y: { duration: 0.3},
+                        
                               },
                             }}
                             exit={{ y: 0 }}
@@ -152,7 +153,8 @@ const Skills = () => {
                               y: isHovered ? -7 : 0,
                               transition: {
                                 opacity: { duration: 0 },
-                                y: { duration: 0.3 },
+                                y: { duration: 0.3},
+                                
                               },
                             }}
                             exit={{ y: 0 }}

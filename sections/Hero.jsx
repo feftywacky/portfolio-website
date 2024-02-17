@@ -36,14 +36,15 @@ const Hero = () => {
         ],
         color: "#846CF3",
         transition: {
-          times: [0, 0.2, 0.3, 0.6, 0.8, 1],
+          times: [0, 0.2, 0.3, 0.6, 0.85, 1],
+          transform: { duration: 1 },
           color: { duration: 0.5 },
         }
       }).then(() => {
         animationControls[index].start({
           color: "#FFFFFF",
           transition: {
-            color: { duration: 0.3 },
+            color: { duration: 1 },
           }
         });
         setIsBouncing(prevState => {

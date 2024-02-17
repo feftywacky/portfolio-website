@@ -13,7 +13,7 @@ const Explore = () => {
   const [active, setActive] = useState("project-2");
 
   return (
-    <div className="flex flex-col justify-center mt-[-12rem] sm:mt-[-8rem]">
+    <div className="flex flex-col justify-center mt-[-12rem] sm:mt-[-9rem]">
       <GlowLamp color="40,87,255" colorDark="48,58,117">
         <motion.div
           variants={staggerContainer}
