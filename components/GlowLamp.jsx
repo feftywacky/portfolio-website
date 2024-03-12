@@ -15,7 +15,7 @@ export const GlowLamp = ({ children, color, colorDark }) => {
   before:pointer-events-none before:absolute before:h-[40rem] before:w-full
   before:bg-[conic-gradient(from_90deg_at_90%_50%,#000212,rgb(var(--feature-color-dark))),conic-gradient(from_270deg_at_10%_50%,rgb(var(--feature-color-dark)),#000212)]
   before:bg-no-repeat before:transition-[transform,opacity] before:duration-1000 before:ease-in
-  before:[mask:radial-gradient(10%_15%_at_center_center,_black,_transparent)]
+  before:[mask:radial-gradient(15%_13%_at_center_center,_black,_transparent)]
   before:[background-size:50%_100%,50%_100%] before:[background-position:1%_0%,99%_0%]
   after:pointer-events-none after:absolute after:inset-0
 `.replace(/\s+/g, ' ').trim();
