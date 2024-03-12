@@ -95,13 +95,14 @@ const Skills = () => {
                     className="w-[78px] h-[78px] lg:w-[96px] lg:h-[96px] flex items-center justify-center rounded-[8px] glass-effect"
                     whileHover={{
                       backgroundColor: "#332941",
-                      transition: { duration: 0.3, delay: 0.1},
+                      // transition: { duration: 1, ease: "easeInOut"},
                       border: "none",
                       scale: 1.05,
                     }}
                     animate={{
                       backgroundColor: isHovered ? "#332941" : "transparent",
                       border: isHovered ? "none" : "",
+                      
                     }}
                     onMouseEnter={() => {
                       setActiveCategory(null);
@@ -132,17 +133,23 @@ const Skills = () => {
                               height: skill.imgWidth ? skill.imgWidth : "50%",
                               position: "absolute",
                             }}
-                            initial={{ opacity: 0 }}
+                            initial={{ opacity: 0, scale: 1 }}
                             animate={{
                               opacity: isHovered ? 1 : 0,
                               y: isHovered ? -7 : 0,
+                              scale: isHovered ? 0.97 : 1,
                               transition: {
-                                opacity: { duration: 0},
-                                y: { duration: 0.3},
-                        
+                                opacity: { duration: 0.2, ease: "easeInOut"},
+                                y: { duration: 0.2, ease: "easeInOut"},
+                                scale: { duration: 0.2, ease: "easeInOut"},
                               },
                             }}
-                            exit={{ y: 0 }}
+                            // exit={{ y: 0, scale: 1, 
+                            //   transition: { 
+                            //     y: { duration: 0.3, ease: "easeInOut" },
+                            //     scale: { duration: 0, ease: "easeInOut"},
+                            //   } 
+                            //   }}
                           />
 
                           <motion.div
@@ -152,12 +159,11 @@ const Skills = () => {
                               opacity: isHovered ? 0 : 1,
                               y: isHovered ? -7 : 0,
                               transition: {
-                                opacity: { duration: 0 },
-                                y: { duration: 0.3},
+                                opacity: { duration: 0, ease: "easeInOut"},
+                                y: { duration: 0.2, ease: "easeInOut"},
                                 
                               },
                             }}
-                            exit={{ y: 0 }}
                           >
                             <SkillIcon
                               color={skill.color}

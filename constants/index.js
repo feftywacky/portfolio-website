@@ -216,7 +216,7 @@ export const skillSquares = [
 
     {
         category: 'Databases',
-        imgWidth: '65%',
+        imgWidth: '55%',
         
         svgViewBox: '0 0 32 32',
         imgURL: '/skills/mongodb.svg',

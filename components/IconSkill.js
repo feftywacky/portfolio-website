@@ -24,7 +24,7 @@ export const SkillIcon = ({
 
   const icon = {
     hidden: {
-      opacity: 1,
+      opacity: 0,
       pathLength: 1,
       scale: 1,
       fill: "none",
@@ -64,13 +64,13 @@ export const SkillIcon = ({
             variants={icon}
             initial={"hidden"}
             animate={"visible"}
-            transition={{
-              default: { duration: duration, ease: "easeInOut" },
-              fill: {
-                duration: isHovered ? 0 : duration,
-                ease: [0.85, 0, 0.15, 1],
-              },
-            }}
+            // transition={{
+            //   default: { duration: duration, ease: "easeInOut" },
+            //   fill: {
+            //     duration: isHovered ? 0 : duration,
+            //     ease: [0.85, 0, 0.15, 1],
+            //   },
+            // }}
           />
         ))}
       </motion.svg>

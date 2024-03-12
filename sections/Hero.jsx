@@ -153,7 +153,7 @@ const Hero = () => {
             <img
               src="/pfp.jpg"
               alt="hero_pfp"
-              className="absolute transform -translate-x-1/2 -translate-y-1/2 top-[9.5rem] sm:top-[18rem] left-1/2"
+              className="absolute transform -translate-x-1/2 -translate-y-1/2 top-[9.5rem] sm:top-[15rem] lg:top-[18rem] left-1/2"
             />
           </motion.div>
                 
