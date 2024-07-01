@@ -14,7 +14,7 @@ const redirectToLinkedin = () => {
 };
 
 const redirectToEmail = () => {
-  window.open("mailto:linfeyu14@gmail.com", "_blank");
+  window.open("mailto:linfeiyu14@gmail.com", "_blank");
 };
 
 const redirectToResume = () => {
